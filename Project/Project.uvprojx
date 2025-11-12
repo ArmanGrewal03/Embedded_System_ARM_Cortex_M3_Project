@@ -418,6 +418,46 @@
               <FileType>1</FileType>
               <FilePath>.\main.c</FilePath>
             </File>
+            <File>
+              <FileName>menu.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\718_project\Project\menu.h</FilePath>
+            </File>
+            <File>
+              <FileName>menu.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\menu.c</FilePath>
+            </File>
+            <File>
+              <FileName>player.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\player.c</FilePath>
+            </File>
+            <File>
+              <FileName>player.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\player.h</FilePath>
+            </File>
+            <File>
+              <FileName>gallery.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\gallery.c</FilePath>
+            </File>
+            <File>
+              <FileName>gallery.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\gallery.h</FilePath>
+            </File>
+            <File>
+              <FileName>flappy.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\flappy.h</FilePath>
+            </File>
+            <File>
+              <FileName>flappy.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\flappy.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

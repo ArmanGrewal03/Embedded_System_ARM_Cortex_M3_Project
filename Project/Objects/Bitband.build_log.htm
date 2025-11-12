@@ -39,9 +39,25 @@ KBD.h(31): warning:  #1-D: last line of file ends without a newline
   #endif
 cat.h(6412): warning:  #1-D: last line of file ends without a newline
   #endif /* CAT_FLIPPED_H */
-main.c(376): warning:  #1-D: last line of file ends without a newline
-  }
-main.c: 3 warnings, 0 errors
+main.c: 2 warnings, 0 errors
+compiling menu.c...
+KBD.h(31): warning:  #1-D: last line of file ends without a newline
+  #endif
+menu.c: 1 warning, 0 errors
+compiling player.c...
+KBD.h(31): warning:  #1-D: last line of file ends without a newline
+  #endif
+player.c: 1 warning, 0 errors
+compiling gallery.c...
+KBD.h(31): warning:  #1-D: last line of file ends without a newline
+  #endif
+cat.h(6412): warning:  #1-D: last line of file ends without a newline
+  #endif /* CAT_FLIPPED_H */
+gallery.c: 2 warnings, 0 errors
+compiling flappy.c...
+KBD.h(31): warning:  #1-D: last line of file ends without a newline
+  #endif
+flappy.c: 1 warning, 0 errors
 compiling usbcore.c...
 compiling usbdesc.c...
 compiling usbhw.c...
@@ -55,9 +71,9 @@ compiling PIN_LPC17xx.c...
 assembling startup_LPC17xx.s...
 compiling system_LPC17xx.c...
 linking...
-.\Objects\Bitband.axf: error: L6047U: The size of this image (326444 bytes) exceeds the maximum allowed for this version of the linker
+.\Objects\Bitband.axf: error: L6047U: The size of this image (327660 bytes) exceeds the maximum allowed for this version of the linker
 Finished: 0 information, 0 warning, 0 error and 1 fatal error messages.
-".\Objects\Bitband.axf" - 1 Error(s), 5 Warning(s).
+".\Objects\Bitband.axf" - 1 Error(s), 9 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -111,9 +127,9 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.3.0
 
    * Component: Keil.ARM Compiler::Compiler:Event Recorder:DAP:1.5.1
+      Include file:  Config\EventRecorderConf.h
       Source file:   Source\EventRecorder.c
       Include file:  Include\EventRecorder.h
-      Include file:  Config\EventRecorderConf.h
 
    * Component: Keil.MCB1700::Board Support:A/D Converter:1.0.0
       Source file:   Boards\Keil\MCB1700\Common\ADC_MCB1700.c
@@ -122,20 +138,20 @@ Package Vendor: Keil
       Source file:   Boards\Keil\MCB1700\Common\LED_MCB1700.c
 
    * Component: Keil::Device:GPIO:1.1.0
-      Source file:   RTE_Driver\GPIO_LPC17xx.c
       Include file:  RTE_Driver\GPIO_LPC17xx.h
+      Source file:   RTE_Driver\GPIO_LPC17xx.c
 
    * Component: Keil::Device:PIN:1.0.0
-      Source file:   RTE_Driver\PIN_LPC17xx.c
       Include file:  RTE_Driver\PIN_LPC17xx.h
+      Source file:   RTE_Driver\PIN_LPC17xx.c
 
    * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device\Source\ARM\startup_LPC17xx.s
       Include file:  Device\Include\LPC17xx.h
       Source file:   Device\Source\system_LPC17xx.c
-      Source file:   Device\Source\ARM\startup_LPC17xx.s
       Include file:  RTE_Driver\Config\RTE_Device.h
 Target not created.
-Build Time Elapsed:  00:00:04
+Build Time Elapsed:  00:00:05
 </pre>
 </body>
 </html>

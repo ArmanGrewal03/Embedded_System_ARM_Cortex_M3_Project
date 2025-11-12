@@ -28,7 +28,7 @@ F (.\Font_6x8_h.h)(0x690C2C5A)()
 F (.\Font_16x24_h.h)(0x690C2C5A)()
 F (.\KBD.h)(0x690C2C5A)()
 F (.\GLCD.h)(0x690C2C5A)()
-F (.\main.c)(0x6914E554)(--c99 -c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections-I.\RTE\Compiler-I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Users\arman\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\arman\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.7.2\Include-IC:\Users\arman\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include-IC:\Users\arman\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\RTE_Driver-IC:\Users\arman\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\Board-D__UVISION_VERSION="535" -D_RTE_ -DLPC175x_6x -D_RTE_-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (.\main.c)(0x6914F8F4)(--c99 -c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections-I.\RTE\Compiler-I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Users\arman\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\arman\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.7.2\Include-IC:\Users\arman\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include-IC:\Users\arman\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\RTE_Driver-IC:\Users\arman\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\Board-D__UVISION_VERSION="535" -D_RTE_ -DLPC175x_6x -D_RTE_-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (GLCD.h)(0x690C2C5A)
 I (C:\Users\arman\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include\LPC17xx.h)(0x65C6929E)
 I (C:\Users\arman\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm3.h)(0x5D263976)
@@ -50,6 +50,79 @@ I (usbaudio.h)(0x690C2C5A)
 I (type.h)(0x690C2C5A)
 I (cat.h)(0x6914EA06)
 I (tree.h)(0x6914EA05)
+I (menu.h)(0x6914F8F4)
+F (..\..\..\718_project\Project\menu.h)(0x690C2C5A)()
+F (.\menu.c)(0x6915049A)(--c99 -c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections-I.\RTE\Compiler-I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Users\arman\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\arman\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.7.2\Include-IC:\Users\arman\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include-IC:\Users\arman\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\RTE_Driver-IC:\Users\arman\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\Board-D__UVISION_VERSION="535" -D_RTE_ -DLPC175x_6x -D_RTE_-o .\objects\menu.o --omf_browse .\objects\menu.crf --depend .\objects\menu.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x6025CC34)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025CC3E)
+I (GLCD.h)(0x690C2C5A)
+I (KBD.h)(0x690C2C5A)
+I (C:\Users\arman\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include\LPC17xx.h)(0x65C6929E)
+I (C:\Users\arman\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm3.h)(0x5D263976)
+I (C:\Users\arman\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D263976)
+I (C:\Users\arman\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D263976)
+I (C:\Users\arman\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D263976)
+I (C:\Users\arman\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\mpu_armv7.h)(0x5C8FF694)
+I (C:\Users\arman\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include\system_LPC17xx.h)(0x65C6929E)
+I (C:\Users\arman\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\Board\Board_ADC.h)(0x5D14C62A)
+I (menu.h)(0x6914F8F4)
+I (gallery.h)(0x6914F8F4)
+I (player.h)(0x6914F8F4)
+I (flappy.h)(0x6915049A)
+F (.\player.c)(0x6914F8F4)(--c99 -c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections-I.\RTE\Compiler-I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Users\arman\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\arman\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.7.2\Include-IC:\Users\arman\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include-IC:\Users\arman\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\RTE_Driver-IC:\Users\arman\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\Board-D__UVISION_VERSION="535" -D_RTE_ -DLPC175x_6x -D_RTE_-o .\objects\player.o --omf_browse .\objects\player.crf --depend .\objects\player.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x6025CC34)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025CC3E)
+I (C:\Users\arman\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include\LPC17xx.h)(0x65C6929E)
+I (C:\Users\arman\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm3.h)(0x5D263976)
+I (C:\Users\arman\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D263976)
+I (C:\Users\arman\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D263976)
+I (C:\Users\arman\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D263976)
+I (C:\Users\arman\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\mpu_armv7.h)(0x5C8FF694)
+I (C:\Users\arman\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include\system_LPC17xx.h)(0x65C6929E)
+I (GLCD.h)(0x690C2C5A)
+I (KBD.h)(0x690C2C5A)
+I (C:\Users\arman\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\Board\Board_ADC.h)(0x5D14C62A)
+I (usb.h)(0x690C2C5A)
+I (usbcfg.h)(0x690C2C5A)
+I (usbhw.h)(0x690C2C5A)
+I (usbcore.h)(0x690C2C5A)
+I (usbaudio.h)(0x690C2C5A)
+I (type.h)(0x690C2C5A)
+I (player.h)(0x6914F8F4)
+F (.\player.h)(0x6914F8F4)()
+F (.\gallery.c)(0x6914FABE)(--c99 -c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections-I.\RTE\Compiler-I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Users\arman\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\arman\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.7.2\Include-IC:\Users\arman\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include-IC:\Users\arman\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\RTE_Driver-IC:\Users\arman\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\Board-D__UVISION_VERSION="535" -D_RTE_ -DLPC175x_6x -D_RTE_-o .\objects\gallery.o --omf_browse .\objects\gallery.crf --depend .\objects\gallery.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x6025CC34)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025CC3E)
+I (GLCD.h)(0x690C2C5A)
+I (KBD.h)(0x690C2C5A)
+I (C:\Users\arman\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include\LPC17xx.h)(0x65C6929E)
+I (C:\Users\arman\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm3.h)(0x5D263976)
+I (C:\Users\arman\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D263976)
+I (C:\Users\arman\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D263976)
+I (C:\Users\arman\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D263976)
+I (C:\Users\arman\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\mpu_armv7.h)(0x5C8FF694)
+I (C:\Users\arman\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include\system_LPC17xx.h)(0x65C6929E)
+I (C:\Users\arman\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\Board\Board_ADC.h)(0x5D14C62A)
+I (gallery.h)(0x6914F8F4)
+I (cat.h)(0x6914EA06)
+I (tree.h)(0x6914EA05)
+F (.\gallery.h)(0x6914F8F4)()
+F (.\flappy.h)(0x6915049A)()
+F (.\flappy.c)(0x691505FC)(--c99 -c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections-I.\RTE\Compiler-I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Users\arman\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\arman\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.7.2\Include-IC:\Users\arman\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include-IC:\Users\arman\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\RTE_Driver-IC:\Users\arman\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\Board-D__UVISION_VERSION="535" -D_RTE_ -DLPC175x_6x -D_RTE_-o .\objects\flappy.o --omf_browse .\objects\flappy.crf --depend .\objects\flappy.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025CC3E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x6025CC34)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x6025CC34)
+I (GLCD.h)(0x690C2C5A)
+I (KBD.h)(0x690C2C5A)
+I (C:\Users\arman\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include\LPC17xx.h)(0x65C6929E)
+I (C:\Users\arman\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm3.h)(0x5D263976)
+I (C:\Users\arman\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D263976)
+I (C:\Users\arman\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D263976)
+I (C:\Users\arman\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D263976)
+I (C:\Users\arman\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\mpu_armv7.h)(0x5C8FF694)
+I (C:\Users\arman\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include\system_LPC17xx.h)(0x65C6929E)
+I (C:\Users\arman\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\Board\Board_ADC.h)(0x5D14C62A)
+I (flappy.h)(0x6915049A)
 F (.\cat.h)(0x6914EA06)()
 F (.\tree.h)(0x6914EA05)()
 F (.\type.h)(0x690C2C5A)()

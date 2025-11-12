@@ -2,10 +2,12 @@
 #include <stdint.h>
 #include "GLCD.h"
 #include "KBD.h"
+#define __FI 1
 
 #include "menu.h"
 #include "gallery.h"
 #include "player.h"
+#include "flappy.h" 
 
 static void menu_footer(int selected, int total){
   char f[32];
@@ -26,13 +28,16 @@ void initMenu(void){
 }
 
 void selectMenu(int selected){
-  const int total = 2;
+  const int total = 3;
   for (int i = 0; i < total; i++){
     GLCD_SetBackColor(White);
     GLCD_SetTextColor(Black);
     GLCD_ClearLn(2 + i, 1);
 
-    const char *label = (i == 0) ? "Photo Gallery" : "MP3 Player";
+    const char *label =
+    (i == 0) ? "Photo Gallery" :
+    (i == 1) ? "MP3 Player"   :
+               "Flappy Bird";
     char line[32];
     snprintf(line, sizeof(line), "%c %s", (i == selected) ? '>' : ' ', label);
 
@@ -52,7 +57,7 @@ void runMenu(void){
   while(1){
     uint32_t key = get_button();
     if (key & KBD_UP)    { if (selected > 0) selected--; selectMenu(selected); }
-    else if (key & KBD_DOWN){ if (selected < 1) selected++; selectMenu(selected); }
+    else if (key & KBD_DOWN){ if (selected < 2) selected++; selectMenu(selected); }
     else if (key & KBD_SELECT) {
       GLCD_Clear(White);
       GLCD_SetTextColor(Black);
@@ -60,6 +65,7 @@ void runMenu(void){
       switch (selected) {
         case 0: Gallery();        initMenu(); selectMenu(selected); break;
         case 1: runMusicPlayer(); initMenu(); selectMenu(selected); break;
+				case 2: Flappy_Run();     initMenu(); selectMenu(selected); break;
       }
     }
     for (volatile uint32_t d=0; d<40000; d++) __NOP();

@@ -2,6 +2,7 @@
 #include <stdint.h>
 #include "GLCD.h"
 #include "KBD.h"
+#define __FI 1
 
 #include "gallery.h"
 #include "cat.h"
@@ -35,13 +36,13 @@ static void gallery_draw_current(void){
 
   #if defined(IMG0_DATA)
   if (gallery_index == gallery_counter++) {
-      GLCD_Bitmap(0, 0, IMG0_W, IMG0_H, (const unsigned char*)IMG0_DATA);
+      GLCD_Bitmap(0, 0, IMG0_W, IMG0_H, (unsigned char*)IMG0_DATA);
   }
   #endif
 
   #if defined(IMG1_DATA)
   if (gallery_index == gallery_counter++) {
-      GLCD_Bitmap(0, 0, IMG1_W, IMG1_H, (const unsigned char*)IMG1_DATA);
+      GLCD_Bitmap(0, 0, IMG1_W, IMG1_H, (unsigned char*)IMG1_DATA);
   }
   #endif
 
