@@ -7,6 +7,7 @@
 #include "gallery.h"
 #include "cat.h"
 #include "tree.h"
+#include "leafs.c"
 
 #define IMG0_W    CAT_WIDTH
 #define IMG0_H    CAT_HEIGHT
@@ -15,6 +16,10 @@
 #define IMG1_W    TREE_WIDTH
 #define IMG1_H    TREE_HEIGHT
 #define IMG1_DATA TREE_PIXEL_DATA
+
+#define IMG2_W    LEAFS_WIDTH
+#define IMG2_H    LEAFS_HEIGHT
+#define IMG2_DATA LEAFS_pixel_data
 
 static void ui_header(const char* title){
   GLCD_SetBackColor(Blue);
@@ -30,7 +35,6 @@ static int gallery_count = 0;
 
 static void gallery_draw_current(void){
   GLCD_Clear(White);
-  ui_header("Photo Gallery   <SELECT to Back>");
 
   int gallery_counter = 0;
 
@@ -45,13 +49,20 @@ static void gallery_draw_current(void){
       GLCD_Bitmap(0, 0, IMG1_W, IMG1_H, (unsigned char*)IMG1_DATA);
   }
   #endif
-
+	#if defined(IMG2_DATA)
+  if (gallery_index == gallery_counter++) {
+      GLCD_Bitmap(60, 0, IMG2_W, IMG2_H, (unsigned char*)IMG2_DATA);
+  }
+  #endif
+	ui_header("Photo Gallery   <SELECT to Back>");
   GLCD_SetTextColor(Black);
   GLCD_DisplayString(9, 0, 1, (unsigned char*)"LEFT/RIGHT: Prev/Next   SELECT: Back");
 }
 
 void Gallery(void){
-  #if defined(IMG1_DATA)
+	#if defined(IMG2_DATA)
+	    gallery_count = 3;
+  #elif defined(IMG1_DATA)
     gallery_count = 2;
   #elif defined(IMG0_DATA)
     gallery_count = 1;

@@ -6,6 +6,7 @@
 ".\objects\player.o"
 ".\objects\gallery.o"
 ".\objects\flappy.o"
+".\objects\leafs.o"
 ".\objects\usbcore.o"
 ".\objects\usbdesc.o"
 ".\objects\usbhw.o"

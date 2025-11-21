@@ -16,7 +16,7 @@
 
 /* Game params */
 #define BIRD_X         40
-#define BIRD_SIZE      10
+#define BIRD_SIZE      20
 #define GRAVITY        1    
 #define FLAP_VEL      -7      
 #define MAX_FALL       8
@@ -41,7 +41,7 @@ static void draw_rect(int x, int y, int w, int h, unsigned short bg, unsigned sh
 }
 
 static void draw_bird(void){
-  draw_rect(BIRD_X, bird_y, BIRD_SIZE, BIRD_SIZE, White, Red, 1);
+  draw_rect(BIRD_X, bird_y, BIRD_SIZE, BIRD_SIZE, Red, Red, 1);
 }
 
 static void clear_bird(void){

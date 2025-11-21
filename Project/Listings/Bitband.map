@@ -1,4 +1,4 @@
-Component: ARM Compiler 5.06 update 7 (build 960) Tool: armlink [4d3601]
+Component: ARM Compiler 5.06 update 6 (build 750) Tool: armlink [4d35ed]
 
 ==============================================================================
 
@@ -93,33 +93,35 @@ Section Cross References
     menu.o(i.selectMenu) refers to glcd_spi_lpc1700.o(i.GLCD_DisplayString) for GLCD_DisplayString
     menu.o(i.selectMenu) refers to menu.o(i.menu_footer) for menu_footer
     player.o(i.TIMER0_IRQHandler) refers to player.o(i.get_potval) for get_potval
-    player.o(i.TIMER0_IRQHandler) refers to player.o(i.media_update_volume_ui) for media_update_volume_ui
-    player.o(i.TIMER0_IRQHandler) refers to kbd.o(i.get_button) for get_button
-    player.o(i.TIMER0_IRQHandler) refers to player.o(i.__NVIC_DisableIRQ) for __NVIC_DisableIRQ
     player.o(i.TIMER0_IRQHandler) refers to player.o(.data) for DataRun
     player.o(i.TIMER0_IRQHandler) refers to adcuser.o(.data) for VolCur
+    player.o(i.draw_volume_ui) refers to player.o(i.ui_header) for ui_header
+    player.o(i.draw_volume_ui) refers to glcd_spi_lpc1700.o(i.GLCD_DisplayString) for GLCD_DisplayString
+    player.o(i.draw_volume_ui) refers to printf6.o(i.__0sprintf$6) for __2sprintf
+    player.o(i.draw_volume_ui) refers to glcd_spi_lpc1700.o(i.GLCD_Bargraph) for GLCD_Bargraph
+    player.o(i.draw_volume_ui) refers to player.o(.data) for last_vol_pct
     player.o(i.get_potval) refers to player.o(.data) for PotVal
-    player.o(i.media_update_volume_ui) refers to glcd_spi_lpc1700.o(i.GLCD_SetBackColor) for GLCD_SetBackColor
-    player.o(i.media_update_volume_ui) refers to glcd_spi_lpc1700.o(i.GLCD_SetTextColor) for GLCD_SetTextColor
-    player.o(i.media_update_volume_ui) refers to glcd_spi_lpc1700.o(i.GLCD_DisplayString) for GLCD_DisplayString
-    player.o(i.media_update_volume_ui) refers to printf6.o(i.__0sprintf$6) for __2sprintf
-    player.o(i.media_update_volume_ui) refers to glcd_spi_lpc1700.o(i.GLCD_Bargraph) for GLCD_Bargraph
-    player.o(i.media_update_volume_ui) refers to player.o(.data) for s_last_vol
     player.o(i.runMusicPlayer) refers to glcd_spi_lpc1700.o(i.GLCD_Clear) for GLCD_Clear
-    player.o(i.runMusicPlayer) refers to glcd_spi_lpc1700.o(i.GLCD_SetBackColor) for GLCD_SetBackColor
-    player.o(i.runMusicPlayer) refers to glcd_spi_lpc1700.o(i.GLCD_SetTextColor) for GLCD_SetTextColor
+    player.o(i.runMusicPlayer) refers to player.o(i.ui_header) for ui_header
     player.o(i.runMusicPlayer) refers to glcd_spi_lpc1700.o(i.GLCD_DisplayString) for GLCD_DisplayString
     player.o(i.runMusicPlayer) refers to system_lpc17xx.o(i.SystemClockUpdate) for SystemClockUpdate
     player.o(i.runMusicPlayer) refers to usbhw.o(i.USB_Init) for USB_Init
     player.o(i.runMusicPlayer) refers to usbhw.o(i.USB_Connect) for USB_Connect
+    player.o(i.runMusicPlayer) refers to player.o(i.draw_volume_ui) for draw_volume_ui
+    player.o(i.runMusicPlayer) refers to kbd.o(i.get_button) for get_button
+    player.o(i.runMusicPlayer) refers to player.o(i.__NVIC_DisableIRQ) for __NVIC_DisableIRQ
     player.o(i.runMusicPlayer) refers to system_lpc17xx.o(.data) for SystemFrequency
-    player.o(i.runMusicPlayer) refers to player.o(.data) for quit
+    player.o(i.runMusicPlayer) refers to player.o(.data) for ui_vol_pct
+    player.o(i.ui_header) refers to glcd_spi_lpc1700.o(i.GLCD_SetBackColor) for GLCD_SetBackColor
+    player.o(i.ui_header) refers to glcd_spi_lpc1700.o(i.GLCD_SetTextColor) for GLCD_SetTextColor
+    player.o(i.ui_header) refers to glcd_spi_lpc1700.o(i.GLCD_ClearLn) for GLCD_ClearLn
+    player.o(i.ui_header) refers to glcd_spi_lpc1700.o(i.GLCD_DisplayString) for GLCD_DisplayString
     gallery.o(i.Gallery) refers to gallery.o(i.gallery_draw_current) for gallery_draw_current
     gallery.o(i.Gallery) refers to kbd.o(i.get_button) for get_button
     gallery.o(i.Gallery) refers to gallery.o(.data) for gallery_count
     gallery.o(i.gallery_draw_current) refers to glcd_spi_lpc1700.o(i.GLCD_Clear) for GLCD_Clear
-    gallery.o(i.gallery_draw_current) refers to gallery.o(i.ui_header) for ui_header
     gallery.o(i.gallery_draw_current) refers to glcd_spi_lpc1700.o(i.GLCD_Bitmap) for GLCD_Bitmap
+    gallery.o(i.gallery_draw_current) refers to gallery.o(i.ui_header) for ui_header
     gallery.o(i.gallery_draw_current) refers to glcd_spi_lpc1700.o(i.GLCD_SetTextColor) for GLCD_SetTextColor
     gallery.o(i.gallery_draw_current) refers to glcd_spi_lpc1700.o(i.GLCD_DisplayString) for GLCD_DisplayString
     gallery.o(i.gallery_draw_current) refers to gallery.o(.data) for gallery_index
@@ -132,9 +134,9 @@ Section Cross References
     flappy.o(i.Flappy_Run) refers to rand.o(.text) for rand
     flappy.o(i.Flappy_Run) refers to flappy.o(i.hud_draw) for hud_draw
     flappy.o(i.Flappy_Run) refers to kbd.o(i.get_button) for get_button
-    flappy.o(i.Flappy_Run) refers to flappy.o(i.clear_bird) for clear_bird
     flappy.o(i.Flappy_Run) refers to flappy.o(i.clear_pipe) for clear_pipe
     flappy.o(i.Flappy_Run) refers to flappy.o(i.draw_pipe) for draw_pipe
+    flappy.o(i.Flappy_Run) refers to flappy.o(i.clear_bird) for clear_bird
     flappy.o(i.Flappy_Run) refers to flappy.o(i.collide) for collide
     flappy.o(i.Flappy_Run) refers to flappy.o(i.draw_bird) for draw_bird
     flappy.o(i.Flappy_Run) refers to flappy.o(i.wait_short) for wait_short
@@ -295,9 +297,8 @@ Section Cross References
     led_mcb1700.o(i.LED_Uninitialize) refers to led_mcb1700.o(.constdata) for LED_PIN
     eventrecorder.o(i.EventCheckFilter) refers to eventrecorder.o(.bss.noinit) for EventStatus
     eventrecorder.o(i.EventGetTS) refers to eventrecorder.o(i.EventRecorderTimerGetCount) for EventRecorderTimerGetCount
-    eventrecorder.o(i.EventGetTS) refers to eventrecorder.o(.emb_text) for __asm___15_EventRecorder_c_e8d3082c__atomic_wr8
+    eventrecorder.o(i.EventGetTS) refers to eventrecorder.o(.emb_text) for __asm___15_EventRecorder_c_e8d3082c__atomic_xch32
     eventrecorder.o(i.EventGetTS) refers to eventrecorder.o(.bss.noinit) for EventStatus
-    eventrecorder.o(i.EventGetTS) refers to eventrecorder.o(.data) for TS_OverflowLock
     eventrecorder.o(i.EventRecord2) refers to eventrecorder.o(i.EventCheckFilter) for EventCheckFilter
     eventrecorder.o(i.EventRecord2) refers to eventrecorder.o(i.EventGetTS) for EventGetTS
     eventrecorder.o(i.EventRecord2) refers to eventrecorder.o(i.EventRecordItem) for EventRecordItem
@@ -328,7 +329,6 @@ Section Cross References
     eventrecorder.o(i.EventRecorderInitialize) refers to eventrecorder.o(i.EventRecorderStart) for EventRecorderStart
     eventrecorder.o(i.EventRecorderInitialize) refers to eventrecorder.o(.bss.noinit) for EventStatus
     eventrecorder.o(i.EventRecorderInitialize) refers to eventrecorder.o(.constdata) for EventRecorderInfo
-    eventrecorder.o(i.EventRecorderInitialize) refers to eventrecorder.o(.data) for TS_OverflowLock
     eventrecorder.o(i.EventRecorderStart) refers to eventrecorder.o(i.EventGetTS) for EventGetTS
     eventrecorder.o(i.EventRecorderStart) refers to eventrecorder.o(i.EventRecordItem) for EventRecordItem
     eventrecorder.o(i.EventRecorderStart) refers to eventrecorder.o(.bss.noinit) for EventStatus
@@ -349,9 +349,8 @@ Section Cross References
     system_lpc17xx.o(i.SystemClockUpdate) refers to system_lpc17xx.o(.data) for SystemFrequency
     system_lpc17xx.o(i.SystemCoreClockUpdate) refers to uldiv.o(.text) for __aeabi_uldivmod
     system_lpc17xx.o(i.SystemCoreClockUpdate) refers to system_lpc17xx.o(.data) for SystemCoreClock
-    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000F) for __rt_final_cpp
-    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$00000011) for __rt_final_exit
-    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry12b.o(.ARM.Collect$$$$0000000E) for __rt_lib_shutdown_fini
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
@@ -649,6 +648,7 @@ Removing Unused input sections from the image.
     Removing flappy.o(.rev16_text), (4 bytes).
     Removing flappy.o(.revsh_text), (4 bytes).
     Removing flappy.o(.rrx_text), (6 bytes).
+    Removing leafs.o(.constdata), (96001 bytes).
     Removing usbhw.o(.rev16_text), (4 bytes).
     Removing usbhw.o(.revsh_text), (4 bytes).
     Removing usbhw.o(.rrx_text), (6 bytes).
@@ -681,7 +681,7 @@ Removing Unused input sections from the image.
     Removing adc_mcb1700.o(i.ADC_GetValue), (32 bytes).
     Removing adc_mcb1700.o(i.ADC_Initialize), (104 bytes).
     Removing adc_mcb1700.o(i.ADC_StartConversion), (32 bytes).
-    Removing adc_mcb1700.o(i.ADC_Uninitialize), (124 bytes).
+    Removing adc_mcb1700.o(i.ADC_Uninitialize), (100 bytes).
     Removing adc_mcb1700.o(.constdata), (2 bytes).
     Removing led_mcb1700.o(.rev16_text), (4 bytes).
     Removing led_mcb1700.o(.revsh_text), (4 bytes).
@@ -694,9 +694,9 @@ Removing Unused input sections from the image.
     Removing eventrecorder.o(.rev16_text), (4 bytes).
     Removing eventrecorder.o(.revsh_text), (4 bytes).
     Removing eventrecorder.o(.rrx_text), (6 bytes).
-    Removing eventrecorder.o(.emb_text), (132 bytes).
+    Removing eventrecorder.o(.emb_text), (116 bytes).
     Removing eventrecorder.o(i.EventCheckFilter), (40 bytes).
-    Removing eventrecorder.o(i.EventGetTS), (88 bytes).
+    Removing eventrecorder.o(i.EventGetTS), (60 bytes).
     Removing eventrecorder.o(i.EventRecord2), (70 bytes).
     Removing eventrecorder.o(i.EventRecord4), (118 bytes).
     Removing eventrecorder.o(i.EventRecordData), (278 bytes).
@@ -704,7 +704,7 @@ Removing Unused input sections from the image.
     Removing eventrecorder.o(i.EventRecorderClockUpdate), (44 bytes).
     Removing eventrecorder.o(i.EventRecorderDisable), (92 bytes).
     Removing eventrecorder.o(i.EventRecorderEnable), (92 bytes).
-    Removing eventrecorder.o(i.EventRecorderInitialize), (304 bytes).
+    Removing eventrecorder.o(i.EventRecorderInitialize), (296 bytes).
     Removing eventrecorder.o(i.EventRecorderStart), (48 bytes).
     Removing eventrecorder.o(i.EventRecorderStop), (48 bytes).
     Removing eventrecorder.o(i.EventRecorderTimerGetCount), (12 bytes).
@@ -712,7 +712,6 @@ Removing Unused input sections from the image.
     Removing eventrecorder.o(i.EventRecorderTimerSetup), (36 bytes).
     Removing eventrecorder.o(i.GetContext), (16 bytes).
     Removing eventrecorder.o(i.crc16_ccitt), (66 bytes).
-    Removing eventrecorder.o(.data), (1 bytes).
     Removing gpio_lpc17xx.o(.rev16_text), (4 bytes).
     Removing gpio_lpc17xx.o(.revsh_text), (4 bytes).
     Removing gpio_lpc17xx.o(.rrx_text), (6 bytes).
@@ -736,7 +735,7 @@ Removing Unused input sections from the image.
     Removing cdrcmple.o(.text), (48 bytes).
     Removing depilogue.o(.text), (186 bytes).
 
-114 unused section(s) (total 311749 bytes) removed from the image.
+114 unused section(s) (total 407673 bytes) removed from the image.
 
 ==============================================================================
 
@@ -747,37 +746,35 @@ Image Symbol Table
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
     RESET                                    0x00000000   Section      204  startup_lpc17xx.o(RESET)
-    ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
     ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12b.o ABSOLUTE
-    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfb.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf7.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf8.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfb.o ABSOLUTE
     ../clib/microlib/printf/stubs.s          0x00000000   Number         0  stubs.o ABSOLUTE
     ../clib/microlib/stdio/fputc.c           0x00000000   Number         0  fputc.o ABSOLUTE
     ../clib/microlib/stdio/semi.s            0x00000000   Number         0  semi.o ABSOLUTE
@@ -793,16 +790,16 @@ Image Symbol Table
     ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
     ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixul.o ABSOLUTE
     ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
-    C:\Users\arman\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.7.2\Source\EventRecorder.c 0x00000000   Number         0  eventrecorder.o ABSOLUTE
-    C:\Users\arman\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Boards\Keil\MCB1700\Common\ADC_MCB1700.c 0x00000000   Number         0  adc_mcb1700.o ABSOLUTE
-    C:\Users\arman\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Boards\Keil\MCB1700\Common\LED_MCB1700.c 0x00000000   Number         0  led_mcb1700.o ABSOLUTE
-    C:\Users\arman\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\RTE_Driver\GPIO_LPC17xx.c 0x00000000   Number         0  gpio_lpc17xx.o ABSOLUTE
-    C:\Users\arman\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\RTE_Driver\PIN_LPC17xx.c 0x00000000   Number         0  pin_lpc17xx.o ABSOLUTE
-    C:\\Users\\arman\\AppData\\Local\\Arm\\Packs\\Keil\\ARM_Compiler\\1.7.2\\Source\\EventRecorder.c 0x00000000   Number         0  eventrecorder.o ABSOLUTE
-    C:\\Users\\arman\\AppData\\Local\\Arm\\Packs\\Keil\\LPC1700_DFP\\2.7.2\\Boards\\Keil\\MCB1700\\Common\\ADC_MCB1700.c 0x00000000   Number         0  adc_mcb1700.o ABSOLUTE
-    C:\\Users\\arman\\AppData\\Local\\Arm\\Packs\\Keil\\LPC1700_DFP\\2.7.2\\Boards\\Keil\\MCB1700\\Common\\LED_MCB1700.c 0x00000000   Number         0  led_mcb1700.o ABSOLUTE
-    C:\\Users\\arman\\AppData\\Local\\Arm\\Packs\\Keil\\LPC1700_DFP\\2.7.2\\RTE_Driver\\GPIO_LPC17xx.c 0x00000000   Number         0  gpio_lpc17xx.o ABSOLUTE
-    C:\\Users\\arman\\AppData\\Local\\Arm\\Packs\\Keil\\LPC1700_DFP\\2.7.2\\RTE_Driver\\PIN_LPC17xx.c 0x00000000   Number         0  pin_lpc17xx.o ABSOLUTE
+    C:\Users\ECBME\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.6.3\Source\EventRecorder.c 0x00000000   Number         0  eventrecorder.o ABSOLUTE
+    C:\Users\ECBME\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.6.0\Boards\Keil\MCB1700\Common\ADC_MCB1700.c 0x00000000   Number         0  adc_mcb1700.o ABSOLUTE
+    C:\Users\ECBME\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.6.0\Boards\Keil\MCB1700\Common\LED_MCB1700.c 0x00000000   Number         0  led_mcb1700.o ABSOLUTE
+    C:\Users\ECBME\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.6.0\RTE_Driver\GPIO_LPC17xx.c 0x00000000   Number         0  gpio_lpc17xx.o ABSOLUTE
+    C:\Users\ECBME\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.6.0\RTE_Driver\PIN_LPC17xx.c 0x00000000   Number         0  pin_lpc17xx.o ABSOLUTE
+    C:\\Users\\ECBME\\AppData\\Local\\Arm\\Packs\\Keil\\ARM_Compiler\\1.6.3\\Source\\EventRecorder.c 0x00000000   Number         0  eventrecorder.o ABSOLUTE
+    C:\\Users\\ECBME\\AppData\\Local\\Arm\\Packs\\Keil\\LPC1700_DFP\\2.6.0\\Boards\\Keil\\MCB1700\\Common\\ADC_MCB1700.c 0x00000000   Number         0  adc_mcb1700.o ABSOLUTE
+    C:\\Users\\ECBME\\AppData\\Local\\Arm\\Packs\\Keil\\LPC1700_DFP\\2.6.0\\Boards\\Keil\\MCB1700\\Common\\LED_MCB1700.c 0x00000000   Number         0  led_mcb1700.o ABSOLUTE
+    C:\\Users\\ECBME\\AppData\\Local\\Arm\\Packs\\Keil\\LPC1700_DFP\\2.6.0\\RTE_Driver\\GPIO_LPC17xx.c 0x00000000   Number         0  gpio_lpc17xx.o ABSOLUTE
+    C:\\Users\\ECBME\\AppData\\Local\\Arm\\Packs\\Keil\\LPC1700_DFP\\2.6.0\\RTE_Driver\\PIN_LPC17xx.c 0x00000000   Number         0  pin_lpc17xx.o ABSOLUTE
     GLCD_SPI_LPC1700.c                       0x00000000   Number         0  glcd_spi_lpc1700.o ABSOLUTE
     GLCD_SPI_LPC1700.c                       0x00000000   Number         0  glcd_spi_lpc1700.o ABSOLUTE
     KBD.c                                    0x00000000   Number         0  kbd.o ABSOLUTE
@@ -819,6 +816,7 @@ Image Symbol Table
     gallery.c                                0x00000000   Number         0  gallery.o ABSOLUTE
     handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
     init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    leafs.c                                  0x00000000   Number         0  leafs.o ABSOLUTE
     main.c                                   0x00000000   Number         0  main.o ABSOLUTE
     main.c                                   0x00000000   Number         0  main.o ABSOLUTE
     menu.c                                   0x00000000   Number         0  menu.o ABSOLUTE
@@ -836,200 +834,202 @@ Image Symbol Table
     .ARM.Collect$$$$00000008                 0x000000d4   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
     .ARM.Collect$$$$0000000A                 0x000000d4   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
     .ARM.Collect$$$$0000000B                 0x000000d4   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
-    .ARM.Collect$$$$0000000E                 0x000000dc   Section        4  entry12b.o(.ARM.Collect$$$$0000000E)
-    .ARM.Collect$$$$0000000F                 0x000000e0   Section        0  entry10a.o(.ARM.Collect$$$$0000000F)
-    .ARM.Collect$$$$00000011                 0x000000e0   Section        0  entry11a.o(.ARM.Collect$$$$00000011)
-    .ARM.Collect$$$$00002712                 0x000000e0   Section        4  entry2.o(.ARM.Collect$$$$00002712)
-    __lit__00000000                          0x000000e0   Data           4  entry2.o(.ARM.Collect$$$$00002712)
-    .text                                    0x000000e4   Section       36  startup_lpc17xx.o(.text)
-    .text                                    0x00000108   Section        0  rand.o(.text)
-    .text                                    0x0000012c   Section        0  uidiv.o(.text)
-    .text                                    0x00000158   Section       36  init.o(.text)
-    i.ADC_EP_GetRequest                      0x0000017c   Section        0  adcuser.o(i.ADC_EP_GetRequest)
-    i.ADC_EP_SetRequest                      0x00000180   Section        0  adcuser.o(i.ADC_EP_SetRequest)
-    i.ADC_IF_GetRequest                      0x00000184   Section        0  adcuser.o(i.ADC_IF_GetRequest)
-    i.ADC_IF_SetRequest                      0x00000214   Section        0  adcuser.o(i.ADC_IF_SetRequest)
-    i.ADC_IRQHandler                         0x00000274   Section        0  adc_mcb1700.o(i.ADC_IRQHandler)
-    i.EPAdr                                  0x0000029c   Section        0  usbhw.o(i.EPAdr)
-    i.GLCD_Clear                             0x000002ac   Section        0  glcd_spi_lpc1700.o(i.GLCD_Clear)
-    i.GLCD_SetBackColor                      0x000002d8   Section        0  glcd_spi_lpc1700.o(i.GLCD_SetBackColor)
-    i.GLCD_SetTextColor                      0x000002e4   Section        0  glcd_spi_lpc1700.o(i.GLCD_SetTextColor)
-    i.USB_DirCtrlEP                          0x000002f0   Section        0  usbhw.o(i.USB_DirCtrlEP)
-    i.USB_Reset_Event                        0x000002f2   Section        0  usbuser.o(i.USB_Reset_Event)
-    i.USB_Resume                             0x000002fa   Section        0  usbhw.o(i.USB_Resume)
+    .ARM.Collect$$$$0000000D                 0x000000dc   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x000000dc   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x000000dc   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x000000dc   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x000000e0   Section       36  startup_lpc17xx.o(.text)
+    .text                                    0x00000104   Section        0  rand.o(.text)
+    .text                                    0x00000128   Section        0  uidiv.o(.text)
+    .text                                    0x00000154   Section       36  init.o(.text)
+    i.ADC_EP_GetRequest                      0x00000178   Section        0  adcuser.o(i.ADC_EP_GetRequest)
+    i.ADC_EP_SetRequest                      0x0000017c   Section        0  adcuser.o(i.ADC_EP_SetRequest)
+    i.ADC_IF_GetRequest                      0x00000180   Section        0  adcuser.o(i.ADC_IF_GetRequest)
+    i.ADC_IF_SetRequest                      0x00000210   Section        0  adcuser.o(i.ADC_IF_SetRequest)
+    i.ADC_IRQHandler                         0x00000270   Section        0  adc_mcb1700.o(i.ADC_IRQHandler)
+    i.EPAdr                                  0x00000298   Section        0  usbhw.o(i.EPAdr)
+    i.GLCD_Bitmap                            0x000002a8   Section        0  glcd_spi_lpc1700.o(i.GLCD_Bitmap)
+    i.USB_DirCtrlEP                          0x000002fa   Section        0  usbhw.o(i.USB_DirCtrlEP)
     .ARM.__at_0x02FC                         0x000002fc   Section        4  startup_lpc17xx.o(.ARM.__at_0x02FC)
     i.Flappy_Run                             0x00000300   Section        0  flappy.o(i.Flappy_Run)
     i.GLCD_Bargraph                          0x000004f0   Section        0  glcd_spi_lpc1700.o(i.GLCD_Bargraph)
-    i.GLCD_Bitmap                            0x00000558   Section        0  glcd_spi_lpc1700.o(i.GLCD_Bitmap)
-    i.GLCD_ClearLn                           0x000005aa   Section        0  glcd_spi_lpc1700.o(i.GLCD_ClearLn)
-    i.GLCD_DisplayChar                       0x00000608   Section        0  glcd_spi_lpc1700.o(i.GLCD_DisplayChar)
-    i.GLCD_DisplayString                     0x00000664   Section        0  glcd_spi_lpc1700.o(i.GLCD_DisplayString)
-    i.GLCD_DrawChar                          0x0000068c   Section        0  glcd_spi_lpc1700.o(i.GLCD_DrawChar)
-    i.GLCD_Init                              0x00000728   Section        0  glcd_spi_lpc1700.o(i.GLCD_Init)
-    i.GLCD_SetWindow                         0x00000d10   Section        0  glcd_spi_lpc1700.o(i.GLCD_SetWindow)
-    i.GLCD_WindowMax                         0x00000dbc   Section        0  glcd_spi_lpc1700.o(i.GLCD_WindowMax)
-    i.GPIO_PinWrite                          0x00000dd0   Section        0  gpio_lpc17xx.o(i.GPIO_PinWrite)
-    i.GPIO_PortClock                         0x00000df8   Section        0  gpio_lpc17xx.o(i.GPIO_PortClock)
-    i.GPIO_SetDir                            0x00000e24   Section        0  gpio_lpc17xx.o(i.GPIO_SetDir)
-    i.Gallery                                0x00000e5c   Section        0  gallery.o(i.Gallery)
-    i.KBD_Init                               0x00000ef4   Section        0  kbd.o(i.KBD_Init)
-    i.KBD_get                                0x00000f30   Section        0  kbd.o(i.KBD_get)
-    i.LED_Initialize                         0x00000f40   Section        0  led_mcb1700.o(i.LED_Initialize)
-    i.PIN_Configure                          0x00000f9c   Section        0  pin_lpc17xx.o(i.PIN_Configure)
-    i.RdCmdDat                               0x00001098   Section        0  usbhw.o(i.RdCmdDat)
-    i.SystemClockUpdate                      0x000010c8   Section        0  system_lpc17xx.o(i.SystemClockUpdate)
-    i.SystemInit                             0x00001208   Section        0  system_lpc17xx.o(i.SystemInit)
-    i.TIMER0_IRQHandler                      0x00001348   Section        0  player.o(i.TIMER0_IRQHandler)
-    i.USB_ClrStallEP                         0x0000149c   Section        0  usbhw.o(i.USB_ClrStallEP)
-    i.USB_ConfigEP                           0x000014bc   Section        0  usbhw.o(i.USB_ConfigEP)
-    i.USB_Configure                          0x00001508   Section        0  usbhw.o(i.USB_Configure)
-    i.USB_Connect                            0x0000154c   Section        0  usbhw.o(i.USB_Connect)
-    i.USB_DMA_BufAdr                         0x0000156c   Section        0  usbhw.o(i.USB_DMA_BufAdr)
-    i.USB_DMA_Enable                         0x00001590   Section        0  usbhw.o(i.USB_DMA_Enable)
-    i.USB_DMA_Setup                          0x000015a8   Section        0  usbhw.o(i.USB_DMA_Setup)
-    i.USB_DataInStage                        0x000016b4   Section        0  usbcore.o(i.USB_DataInStage)
-    i.USB_DataOutStage                       0x000016ec   Section        0  usbcore.o(i.USB_DataOutStage)
-    i.USB_DisableEP                          0x00001714   Section        0  usbhw.o(i.USB_DisableEP)
-    i.USB_EnableEP                           0x00001738   Section        0  usbhw.o(i.USB_EnableEP)
-    i.USB_EndPoint0                          0x00001758   Section        0  usbcore.o(i.USB_EndPoint0)
-    i.USB_EndPoint3                          0x00001a88   Section        0  usbuser.o(i.USB_EndPoint3)
-    i.USB_IRQHandler                         0x00001b40   Section        0  usbhw.o(i.USB_IRQHandler)
-    i.USB_Init                               0x00001d5c   Section        0  usbhw.o(i.USB_Init)
-    i.USB_ReadEP                             0x00001e0c   Section        0  usbhw.o(i.USB_ReadEP)
-    i.USB_ReqGetDescriptor                   0x00001e78   Section        0  usbcore.o(i.USB_ReqGetDescriptor)
-    i.USB_ReqGetStatus                       0x00001f30   Section        0  usbcore.o(i.USB_ReqGetStatus)
-    i.USB_ReqSetClrFeature                   0x00001ff0   Section        0  usbcore.o(i.USB_ReqSetClrFeature)
-    i.USB_ReqSetConfiguration                0x000020dc   Section        0  usbcore.o(i.USB_ReqSetConfiguration)
-    i.USB_ReqSetInterface                    0x00002294   Section        0  usbcore.o(i.USB_ReqSetInterface)
-    i.USB_Reset                              0x000023c4   Section        0  usbhw.o(i.USB_Reset)
-    i.USB_ResetCore                          0x00002488   Section        0  usbcore.o(i.USB_ResetCore)
-    i.USB_ResetEP                            0x000024c4   Section        0  usbhw.o(i.USB_ResetEP)
-    i.USB_SOF_Event                          0x000024e4   Section        0  usbuser.o(i.USB_SOF_Event)
-    i.USB_SetAddress                         0x000024e8   Section        0  usbhw.o(i.USB_SetAddress)
-    i.USB_SetStallEP                         0x00002518   Section        0  usbhw.o(i.USB_SetStallEP)
-    i.USB_SetupStage                         0x0000253c   Section        0  usbcore.o(i.USB_SetupStage)
-    i.USB_StatusInStage                      0x0000254c   Section        0  usbcore.o(i.USB_StatusInStage)
-    i.USB_StatusOutStage                     0x0000255c   Section        0  usbcore.o(i.USB_StatusOutStage)
-    i.USB_Suspend                            0x0000256c   Section        0  usbhw.o(i.USB_Suspend)
-    i.USB_WakeUpCfg                          0x0000256e   Section        0  usbhw.o(i.USB_WakeUpCfg)
-    i.USB_WriteEP                            0x00002570   Section        0  usbhw.o(i.USB_WriteEP)
-    i.WrCmd                                  0x000025c4   Section        0  usbhw.o(i.WrCmd)
-    i.WrCmdDat                               0x000025ec   Section        0  usbhw.o(i.WrCmdDat)
-    i.WrCmdEP                                0x00002630   Section        0  usbhw.o(i.WrCmdEP)
-    i.__0snprintf$6                          0x00002688   Section        0  printf6.o(i.__0snprintf$6)
-    i.__0sprintf$6                           0x000026bc   Section        0  printf6.o(i.__0sprintf$6)
-    i.__NVIC_DisableIRQ                      0x000026e4   Section        0  player.o(i.__NVIC_DisableIRQ)
-    __NVIC_DisableIRQ                        0x000026e5   Thumb Code    54  player.o(i.__NVIC_DisableIRQ)
-    i.__scatterload_copy                     0x00002720   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x0000272e   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x00002730   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i._printf_core                           0x00002740   Section        0  printf6.o(i._printf_core)
-    _printf_core                             0x00002741   Thumb Code   748  printf6.o(i._printf_core)
-    i._printf_post_padding                   0x00002a30   Section        0  printf6.o(i._printf_post_padding)
-    _printf_post_padding                     0x00002a31   Thumb Code    36  printf6.o(i._printf_post_padding)
-    i._printf_pre_padding                    0x00002a54   Section        0  printf6.o(i._printf_pre_padding)
-    _printf_pre_padding                      0x00002a55   Thumb Code    46  printf6.o(i._printf_pre_padding)
-    i._snputc                                0x00002a82   Section        0  printf6.o(i._snputc)
-    _snputc                                  0x00002a83   Thumb Code    22  printf6.o(i._snputc)
-    i._sputc                                 0x00002a98   Section        0  printf6.o(i._sputc)
-    _sputc                                   0x00002a99   Thumb Code    10  printf6.o(i._sputc)
-    i.clear_bird                             0x00002aa4   Section        0  flappy.o(i.clear_bird)
-    clear_bird                               0x00002aa5   Thumb Code    32  flappy.o(i.clear_bird)
-    i.clear_pipe                             0x00002ac8   Section        0  flappy.o(i.clear_pipe)
-    clear_pipe                               0x00002ac9   Thumb Code    90  flappy.o(i.clear_pipe)
-    i.collide                                0x00002b24   Section        0  flappy.o(i.collide)
-    collide                                  0x00002b25   Thumb Code    76  flappy.o(i.collide)
-    i.delay                                  0x00002b74   Section        0  glcd_spi_lpc1700.o(i.delay)
-    delay                                    0x00002b75   Thumb Code    14  glcd_spi_lpc1700.o(i.delay)
-    i.draw_bird                              0x00002b84   Section        0  flappy.o(i.draw_bird)
-    draw_bird                                0x00002b85   Thumb Code    36  flappy.o(i.draw_bird)
-    i.draw_pipe                              0x00002bac   Section        0  flappy.o(i.draw_pipe)
-    draw_pipe                                0x00002bad   Thumb Code    98  flappy.o(i.draw_pipe)
-    i.draw_rect                              0x00002c0e   Section        0  flappy.o(i.draw_rect)
-    draw_rect                                0x00002c0f   Thumb Code    62  flappy.o(i.draw_rect)
-    i.gallery_draw_current                   0x00002c4c   Section        0  gallery.o(i.gallery_draw_current)
-    gallery_draw_current                     0x00002c4d   Thumb Code    98  gallery.o(i.gallery_draw_current)
-    i.game_over_screen                       0x00002d08   Section        0  flappy.o(i.game_over_screen)
-    game_over_screen                         0x00002d09   Thumb Code    50  flappy.o(i.game_over_screen)
-    i.get_button                             0x00002d64   Section        0  kbd.o(i.get_button)
-    i.get_potval                             0x00002d78   Section        0  player.o(i.get_potval)
-    get_potval                               0x00002d79   Thumb Code    58  player.o(i.get_potval)
-    i.hud_draw                               0x00002dbc   Section        0  flappy.o(i.hud_draw)
-    hud_draw                                 0x00002dbd   Thumb Code    70  flappy.o(i.hud_draw)
-    i.initMenu                               0x00002e1c   Section        0  menu.o(i.initMenu)
-    i.main                                   0x00002e60   Section        0  main.o(i.main)
-    i.media_update_volume_ui                 0x00002f00   Section        0  player.o(i.media_update_volume_ui)
-    media_update_volume_ui                   0x00002f01   Thumb Code   102  player.o(i.media_update_volume_ui)
-    i.menu_footer                            0x00002fb4   Section        0  menu.o(i.menu_footer)
-    menu_footer                              0x00002fb5   Thumb Code    60  menu.o(i.menu_footer)
-    i.rd_id_man                              0x00003008   Section        0  glcd_spi_lpc1700.o(i.rd_id_man)
-    rd_id_man                                0x00003009   Thumb Code   132  glcd_spi_lpc1700.o(i.rd_id_man)
-    i.rd_reg                                 0x00003094   Section        0  glcd_spi_lpc1700.o(i.rd_reg)
-    rd_reg                                   0x00003095   Thumb Code    66  glcd_spi_lpc1700.o(i.rd_reg)
-    i.runMenu                                0x000030dc   Section        0  menu.o(i.runMenu)
-    i.runMusicPlayer                         0x000031a4   Section        0  player.o(i.runMusicPlayer)
-    i.selectMenu                             0x00003314   Section        0  menu.o(i.selectMenu)
-    i.spi_tran                               0x000033e0   Section        0  glcd_spi_lpc1700.o(i.spi_tran)
-    spi_tran                                 0x000033e1   Thumb Code    28  glcd_spi_lpc1700.o(i.spi_tran)
-    i.spi_tran_man                           0x00003400   Section        0  glcd_spi_lpc1700.o(i.spi_tran_man)
-    spi_tran_man                             0x00003401   Thumb Code   124  glcd_spi_lpc1700.o(i.spi_tran_man)
-    i.ui_header                              0x00003480   Section        0  gallery.o(i.ui_header)
-    ui_header                                0x00003481   Thumb Code    54  gallery.o(i.ui_header)
-    i.wait_short                             0x000034b6   Section        0  flappy.o(i.wait_short)
-    wait_short                               0x000034b7   Thumb Code    28  flappy.o(i.wait_short)
-    i.wr_cmd                                 0x000034d4   Section        0  glcd_spi_lpc1700.o(i.wr_cmd)
-    wr_cmd                                   0x000034d5   Thumb Code    36  glcd_spi_lpc1700.o(i.wr_cmd)
-    i.wr_dat                                 0x000034fc   Section        0  glcd_spi_lpc1700.o(i.wr_dat)
-    wr_dat                                   0x000034fd   Thumb Code    36  glcd_spi_lpc1700.o(i.wr_dat)
-    i.wr_dat_only                            0x00003524   Section        0  glcd_spi_lpc1700.o(i.wr_dat_only)
-    wr_dat_only                              0x00003525   Thumb Code    18  glcd_spi_lpc1700.o(i.wr_dat_only)
-    i.wr_dat_start                           0x00003538   Section        0  glcd_spi_lpc1700.o(i.wr_dat_start)
-    wr_dat_start                             0x00003539   Thumb Code    16  glcd_spi_lpc1700.o(i.wr_dat_start)
-    i.wr_dat_stop                            0x0000354c   Section        0  glcd_spi_lpc1700.o(i.wr_dat_stop)
-    wr_dat_stop                              0x0000354d   Thumb Code     8  glcd_spi_lpc1700.o(i.wr_dat_stop)
-    i.wr_reg                                 0x00003558   Section        0  glcd_spi_lpc1700.o(i.wr_reg)
-    wr_reg                                   0x00003559   Thumb Code    20  glcd_spi_lpc1700.o(i.wr_reg)
-    .constdata                               0x0000356c   Section     6272  glcd_spi_lpc1700.o(.constdata)
-    .constdata                               0x00004dec   Section    307200  gallery.o(.constdata)
-    CAT_PIXEL_DATA                           0x00004dec   Data       153600  gallery.o(.constdata)
-    TREE_PIXEL_DATA                          0x0002a5ec   Data       153600  gallery.o(.constdata)
-    .constdata                               0x0004fdec   Section      228  usbdesc.o(.constdata)
-    .constdata                               0x0004fed0   Section       16  usbhw.o(.constdata)
-    .constdata                               0x0004fee0   Section       64  usbuser.o(.constdata)
-    .constdata                               0x0004ff20   Section       16  led_mcb1700.o(.constdata)
-    LED_PIN                                  0x0004ff20   Data          16  led_mcb1700.o(.constdata)
-    .constdata                               0x0004ff30   Section       24  eventrecorder.o(.constdata)
-    __tagsym$$used                           0x0004ff30   Number         0  eventrecorder.o(.constdata)
-    .data                                    0x10000000   Section       37  player.o(.data)
-    quit                                     0x10000008   Data           1  player.o(.data)
-    s_last_vol                               0x10000024   Data           1  player.o(.data)
-    .data                                    0x10000028   Section       40  usbcore.o(.data)
-    .data                                    0x10000050   Section        3  adc_mcb1700.o(.data)
-    AD_last                                  0x10000050   Data           2  adc_mcb1700.o(.data)
-    AD_done                                  0x10000052   Data           1  adc_mcb1700.o(.data)
-    .data                                    0x10000054   Section        8  system_lpc17xx.o(.data)
-    .data                                    0x1000005c   Section        4  rand.o(.data)
-    _rand_state                              0x1000005c   Data           4  rand.o(.data)
+    i.GLCD_Clear                             0x00000558   Section        0  glcd_spi_lpc1700.o(i.GLCD_Clear)
+    i.GLCD_ClearLn                           0x00000582   Section        0  glcd_spi_lpc1700.o(i.GLCD_ClearLn)
+    i.GLCD_DisplayChar                       0x000005e0   Section        0  glcd_spi_lpc1700.o(i.GLCD_DisplayChar)
+    i.GLCD_DisplayString                     0x0000063c   Section        0  glcd_spi_lpc1700.o(i.GLCD_DisplayString)
+    i.GLCD_DrawChar                          0x00000664   Section        0  glcd_spi_lpc1700.o(i.GLCD_DrawChar)
+    i.GLCD_Init                              0x00000700   Section        0  glcd_spi_lpc1700.o(i.GLCD_Init)
+    i.GLCD_SetBackColor                      0x00000ce8   Section        0  glcd_spi_lpc1700.o(i.GLCD_SetBackColor)
+    i.GLCD_SetTextColor                      0x00000cf4   Section        0  glcd_spi_lpc1700.o(i.GLCD_SetTextColor)
+    i.GLCD_SetWindow                         0x00000d00   Section        0  glcd_spi_lpc1700.o(i.GLCD_SetWindow)
+    i.GLCD_WindowMax                         0x00000dac   Section        0  glcd_spi_lpc1700.o(i.GLCD_WindowMax)
+    i.GPIO_PinWrite                          0x00000dc0   Section        0  gpio_lpc17xx.o(i.GPIO_PinWrite)
+    i.GPIO_PortClock                         0x00000de8   Section        0  gpio_lpc17xx.o(i.GPIO_PortClock)
+    i.GPIO_SetDir                            0x00000e14   Section        0  gpio_lpc17xx.o(i.GPIO_SetDir)
+    i.Gallery                                0x00000e4c   Section        0  gallery.o(i.Gallery)
+    i.KBD_Init                               0x00000ee4   Section        0  kbd.o(i.KBD_Init)
+    i.KBD_get                                0x00000f20   Section        0  kbd.o(i.KBD_get)
+    i.LED_Initialize                         0x00000f30   Section        0  led_mcb1700.o(i.LED_Initialize)
+    i.PIN_Configure                          0x00000f8c   Section        0  pin_lpc17xx.o(i.PIN_Configure)
+    i.RdCmdDat                               0x00001088   Section        0  usbhw.o(i.RdCmdDat)
+    i.SystemClockUpdate                      0x000010b8   Section        0  system_lpc17xx.o(i.SystemClockUpdate)
+    i.SystemInit                             0x000011f8   Section        0  system_lpc17xx.o(i.SystemInit)
+    i.TIMER0_IRQHandler                      0x00001338   Section        0  player.o(i.TIMER0_IRQHandler)
+    i.USB_ClrStallEP                         0x00001468   Section        0  usbhw.o(i.USB_ClrStallEP)
+    i.USB_ConfigEP                           0x00001488   Section        0  usbhw.o(i.USB_ConfigEP)
+    i.USB_Configure                          0x000014d4   Section        0  usbhw.o(i.USB_Configure)
+    i.USB_Connect                            0x00001518   Section        0  usbhw.o(i.USB_Connect)
+    i.USB_DMA_BufAdr                         0x00001538   Section        0  usbhw.o(i.USB_DMA_BufAdr)
+    i.USB_DMA_Enable                         0x0000155c   Section        0  usbhw.o(i.USB_DMA_Enable)
+    i.USB_DMA_Setup                          0x00001574   Section        0  usbhw.o(i.USB_DMA_Setup)
+    i.USB_DataInStage                        0x00001680   Section        0  usbcore.o(i.USB_DataInStage)
+    i.USB_DataOutStage                       0x000016b8   Section        0  usbcore.o(i.USB_DataOutStage)
+    i.USB_DisableEP                          0x000016e0   Section        0  usbhw.o(i.USB_DisableEP)
+    i.USB_EnableEP                           0x00001704   Section        0  usbhw.o(i.USB_EnableEP)
+    i.USB_EndPoint0                          0x00001724   Section        0  usbcore.o(i.USB_EndPoint0)
+    i.USB_EndPoint3                          0x00001a54   Section        0  usbuser.o(i.USB_EndPoint3)
+    i.USB_IRQHandler                         0x00001b0c   Section        0  usbhw.o(i.USB_IRQHandler)
+    i.USB_Init                               0x00001d28   Section        0  usbhw.o(i.USB_Init)
+    i.USB_ReadEP                             0x00001dd8   Section        0  usbhw.o(i.USB_ReadEP)
+    i.USB_ReqGetDescriptor                   0x00001e44   Section        0  usbcore.o(i.USB_ReqGetDescriptor)
+    i.USB_ReqGetStatus                       0x00001efc   Section        0  usbcore.o(i.USB_ReqGetStatus)
+    i.USB_ReqSetClrFeature                   0x00001fbc   Section        0  usbcore.o(i.USB_ReqSetClrFeature)
+    i.USB_ReqSetConfiguration                0x000020a8   Section        0  usbcore.o(i.USB_ReqSetConfiguration)
+    i.USB_ReqSetInterface                    0x00002260   Section        0  usbcore.o(i.USB_ReqSetInterface)
+    i.USB_Reset                              0x00002390   Section        0  usbhw.o(i.USB_Reset)
+    i.USB_ResetCore                          0x00002454   Section        0  usbcore.o(i.USB_ResetCore)
+    i.USB_ResetEP                            0x00002490   Section        0  usbhw.o(i.USB_ResetEP)
+    i.USB_Reset_Event                        0x000024b0   Section        0  usbuser.o(i.USB_Reset_Event)
+    i.USB_Resume                             0x000024b8   Section        0  usbhw.o(i.USB_Resume)
+    i.USB_SOF_Event                          0x000024ba   Section        0  usbuser.o(i.USB_SOF_Event)
+    i.USB_SetAddress                         0x000024bc   Section        0  usbhw.o(i.USB_SetAddress)
+    i.USB_SetStallEP                         0x000024ec   Section        0  usbhw.o(i.USB_SetStallEP)
+    i.USB_SetupStage                         0x00002510   Section        0  usbcore.o(i.USB_SetupStage)
+    i.USB_StatusInStage                      0x00002520   Section        0  usbcore.o(i.USB_StatusInStage)
+    i.USB_StatusOutStage                     0x00002530   Section        0  usbcore.o(i.USB_StatusOutStage)
+    i.USB_Suspend                            0x00002540   Section        0  usbhw.o(i.USB_Suspend)
+    i.USB_WakeUpCfg                          0x00002542   Section        0  usbhw.o(i.USB_WakeUpCfg)
+    i.USB_WriteEP                            0x00002544   Section        0  usbhw.o(i.USB_WriteEP)
+    i.WrCmd                                  0x00002598   Section        0  usbhw.o(i.WrCmd)
+    i.WrCmdDat                               0x000025c0   Section        0  usbhw.o(i.WrCmdDat)
+    i.WrCmdEP                                0x00002604   Section        0  usbhw.o(i.WrCmdEP)
+    i.__0snprintf$6                          0x0000265c   Section        0  printf6.o(i.__0snprintf$6)
+    i.__0sprintf$6                           0x0000268c   Section        0  printf6.o(i.__0sprintf$6)
+    i.__NVIC_DisableIRQ                      0x000026b4   Section        0  player.o(i.__NVIC_DisableIRQ)
+    __NVIC_DisableIRQ                        0x000026b5   Thumb Code    30  player.o(i.__NVIC_DisableIRQ)
+    i.__scatterload_copy                     0x000026d8   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x000026e6   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x000026e8   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i._printf_core                           0x000026f8   Section        0  printf6.o(i._printf_core)
+    _printf_core                             0x000026f9   Thumb Code   748  printf6.o(i._printf_core)
+    i._printf_post_padding                   0x000029e8   Section        0  printf6.o(i._printf_post_padding)
+    _printf_post_padding                     0x000029e9   Thumb Code    36  printf6.o(i._printf_post_padding)
+    i._printf_pre_padding                    0x00002a0c   Section        0  printf6.o(i._printf_pre_padding)
+    _printf_pre_padding                      0x00002a0d   Thumb Code    46  printf6.o(i._printf_pre_padding)
+    i._snputc                                0x00002a3a   Section        0  printf6.o(i._snputc)
+    _snputc                                  0x00002a3b   Thumb Code    22  printf6.o(i._snputc)
+    i._sputc                                 0x00002a50   Section        0  printf6.o(i._sputc)
+    _sputc                                   0x00002a51   Thumb Code    10  printf6.o(i._sputc)
+    i.clear_bird                             0x00002a5c   Section        0  flappy.o(i.clear_bird)
+    clear_bird                               0x00002a5d   Thumb Code    32  flappy.o(i.clear_bird)
+    i.clear_pipe                             0x00002a80   Section        0  flappy.o(i.clear_pipe)
+    clear_pipe                               0x00002a81   Thumb Code   118  flappy.o(i.clear_pipe)
+    i.collide                                0x00002af8   Section        0  flappy.o(i.collide)
+    collide                                  0x00002af9   Thumb Code    76  flappy.o(i.collide)
+    i.delay                                  0x00002b48   Section        0  glcd_spi_lpc1700.o(i.delay)
+    delay                                    0x00002b49   Thumb Code    14  glcd_spi_lpc1700.o(i.delay)
+    i.draw_bird                              0x00002b58   Section        0  flappy.o(i.draw_bird)
+    draw_bird                                0x00002b59   Thumb Code    32  flappy.o(i.draw_bird)
+    i.draw_pipe                              0x00002b7c   Section        0  flappy.o(i.draw_pipe)
+    draw_pipe                                0x00002b7d   Thumb Code   126  flappy.o(i.draw_pipe)
+    i.draw_rect                              0x00002bfa   Section        0  flappy.o(i.draw_rect)
+    draw_rect                                0x00002bfb   Thumb Code    62  flappy.o(i.draw_rect)
+    i.draw_volume_ui                         0x00002c38   Section        0  player.o(i.draw_volume_ui)
+    draw_volume_ui                           0x00002c39   Thumb Code   106  player.o(i.draw_volume_ui)
+    i.gallery_draw_current                   0x00002d34   Section        0  gallery.o(i.gallery_draw_current)
+    gallery_draw_current                     0x00002d35   Thumb Code   126  gallery.o(i.gallery_draw_current)
+    i.game_over_screen                       0x00002e10   Section        0  flappy.o(i.game_over_screen)
+    game_over_screen                         0x00002e11   Thumb Code    50  flappy.o(i.game_over_screen)
+    i.get_button                             0x00002e6c   Section        0  kbd.o(i.get_button)
+    i.get_potval                             0x00002e80   Section        0  player.o(i.get_potval)
+    get_potval                               0x00002e81   Thumb Code    58  player.o(i.get_potval)
+    i.hud_draw                               0x00002ec4   Section        0  flappy.o(i.hud_draw)
+    hud_draw                                 0x00002ec5   Thumb Code    70  flappy.o(i.hud_draw)
+    i.initMenu                               0x00002f24   Section        0  menu.o(i.initMenu)
+    i.main                                   0x00002f70   Section        0  main.o(i.main)
+    i.menu_footer                            0x00003010   Section        0  menu.o(i.menu_footer)
+    menu_footer                              0x00003011   Thumb Code    58  menu.o(i.menu_footer)
+    i.rd_id_man                              0x00003060   Section        0  glcd_spi_lpc1700.o(i.rd_id_man)
+    rd_id_man                                0x00003061   Thumb Code   132  glcd_spi_lpc1700.o(i.rd_id_man)
+    i.rd_reg                                 0x000030ec   Section        0  glcd_spi_lpc1700.o(i.rd_reg)
+    rd_reg                                   0x000030ed   Thumb Code    66  glcd_spi_lpc1700.o(i.rd_reg)
+    i.runMenu                                0x00003134   Section        0  menu.o(i.runMenu)
+    i.runMusicPlayer                         0x000031fc   Section        0  player.o(i.runMusicPlayer)
+    i.selectMenu                             0x000033cc   Section        0  menu.o(i.selectMenu)
+    i.spi_tran                               0x00003498   Section        0  glcd_spi_lpc1700.o(i.spi_tran)
+    spi_tran                                 0x00003499   Thumb Code    28  glcd_spi_lpc1700.o(i.spi_tran)
+    i.spi_tran_man                           0x000034b8   Section        0  glcd_spi_lpc1700.o(i.spi_tran_man)
+    spi_tran_man                             0x000034b9   Thumb Code   124  glcd_spi_lpc1700.o(i.spi_tran_man)
+    i.ui_header                              0x00003538   Section        0  player.o(i.ui_header)
+    ui_header                                0x00003539   Thumb Code    54  player.o(i.ui_header)
+    i.ui_header                              0x0000356e   Section        0  gallery.o(i.ui_header)
+    ui_header                                0x0000356f   Thumb Code    54  gallery.o(i.ui_header)
+    i.wait_short                             0x000035a4   Section        0  flappy.o(i.wait_short)
+    wait_short                               0x000035a5   Thumb Code    28  flappy.o(i.wait_short)
+    i.wr_cmd                                 0x000035c0   Section        0  glcd_spi_lpc1700.o(i.wr_cmd)
+    wr_cmd                                   0x000035c1   Thumb Code    36  glcd_spi_lpc1700.o(i.wr_cmd)
+    i.wr_dat                                 0x000035e8   Section        0  glcd_spi_lpc1700.o(i.wr_dat)
+    wr_dat                                   0x000035e9   Thumb Code    36  glcd_spi_lpc1700.o(i.wr_dat)
+    i.wr_dat_only                            0x00003610   Section        0  glcd_spi_lpc1700.o(i.wr_dat_only)
+    wr_dat_only                              0x00003611   Thumb Code    18  glcd_spi_lpc1700.o(i.wr_dat_only)
+    i.wr_dat_start                           0x00003624   Section        0  glcd_spi_lpc1700.o(i.wr_dat_start)
+    wr_dat_start                             0x00003625   Thumb Code    16  glcd_spi_lpc1700.o(i.wr_dat_start)
+    i.wr_dat_stop                            0x00003638   Section        0  glcd_spi_lpc1700.o(i.wr_dat_stop)
+    wr_dat_stop                              0x00003639   Thumb Code     8  glcd_spi_lpc1700.o(i.wr_dat_stop)
+    i.wr_reg                                 0x00003644   Section        0  glcd_spi_lpc1700.o(i.wr_reg)
+    wr_reg                                   0x00003645   Thumb Code    20  glcd_spi_lpc1700.o(i.wr_reg)
+    .constdata                               0x00003658   Section     6272  glcd_spi_lpc1700.o(.constdata)
+    .constdata                               0x00004ed8   Section    403201  gallery.o(.constdata)
+    CAT_PIXEL_DATA                           0x00004ed8   Data       153600  gallery.o(.constdata)
+    TREE_PIXEL_DATA                          0x0002a6d8   Data       153600  gallery.o(.constdata)
+    LEAFS_pixel_data                         0x0004fed8   Data       96001  gallery.o(.constdata)
+    .constdata                               0x000675d9   Section      228  usbdesc.o(.constdata)
+    .constdata                               0x000676c0   Section       16  usbhw.o(.constdata)
+    .constdata                               0x000676d0   Section       64  usbuser.o(.constdata)
+    .constdata                               0x00067710   Section       16  led_mcb1700.o(.constdata)
+    LED_PIN                                  0x00067710   Data          16  led_mcb1700.o(.constdata)
+    .constdata                               0x00067720   Section       24  eventrecorder.o(.constdata)
+    __tagsym$$used                           0x00067720   Number         0  eventrecorder.o(.constdata)
+    .data                                    0x10000000   Section        5  glcd_spi_lpc1700.o(.data)
+    Color                                    0x10000000   Data           4  glcd_spi_lpc1700.o(.data)
+    Himax                                    0x10000004   Data           1  glcd_spi_lpc1700.o(.data)
+    .data                                    0x10000008   Section       34  player.o(.data)
+    ui_vol_pct                               0x10000028   Data           1  player.o(.data)
+    last_vol_pct                             0x10000029   Data           1  player.o(.data)
+    .data                                    0x1000002c   Section       40  usbcore.o(.data)
+    .data                                    0x10000054   Section        8  usbhw.o(.data)
+    .data                                    0x1000005c   Section        3  adc_mcb1700.o(.data)
+    AD_last                                  0x1000005c   Data           2  adc_mcb1700.o(.data)
+    AD_done                                  0x1000005e   Data           1  adc_mcb1700.o(.data)
     .bss.noinit                              0x10000080   Section     1188  eventrecorder.o(.bss.noinit)
     EventBuffer                              0x10000080   Data        1024  eventrecorder.o(.bss.noinit)
     EventFilter                              0x10000480   Data         128  eventrecorder.o(.bss.noinit)
     EventStatus                              0x10000500   Data          36  eventrecorder.o(.bss.noinit)
-    .data                                    0x2007c000   Section        5  glcd_spi_lpc1700.o(.data)
-    Color                                    0x2007c000   Data           4  glcd_spi_lpc1700.o(.data)
-    Himax                                    0x2007c004   Data           1  glcd_spi_lpc1700.o(.data)
-    .data                                    0x2007c008   Section        8  gallery.o(.data)
-    gallery_index                            0x2007c008   Data           4  gallery.o(.data)
-    gallery_count                            0x2007c00c   Data           4  gallery.o(.data)
-    .data                                    0x2007c010   Section        8  flappy.o(.data)
-    bird_y                                   0x2007c010   Data           2  flappy.o(.data)
-    bird_v                                   0x2007c012   Data           2  flappy.o(.data)
-    score                                    0x2007c014   Data           4  flappy.o(.data)
-    .data                                    0x2007c018   Section        8  usbhw.o(.data)
-    .data                                    0x2007c020   Section        2  adcuser.o(.data)
-    .bss                                     0x2007c024   Section       64  usbcore.o(.bss)
-    .bss                                     0x2007c064   Section      128  usbhw.o(.bss)
-    STACK                                    0x2007c0e8   Section      512  startup_lpc17xx.o(STACK)
-    USB_RAM                                  0x2007c2e8   Section      544  usbhw.o(USB_RAM)
+    .data                                    0x2007c000   Section        8  gallery.o(.data)
+    gallery_index                            0x2007c000   Data           4  gallery.o(.data)
+    gallery_count                            0x2007c004   Data           4  gallery.o(.data)
+    .data                                    0x2007c008   Section        8  flappy.o(.data)
+    bird_y                                   0x2007c008   Data           2  flappy.o(.data)
+    bird_v                                   0x2007c00a   Data           2  flappy.o(.data)
+    score                                    0x2007c00c   Data           4  flappy.o(.data)
+    .data                                    0x2007c010   Section        2  adcuser.o(.data)
+    .data                                    0x2007c014   Section        8  system_lpc17xx.o(.data)
+    .data                                    0x2007c01c   Section        4  rand.o(.data)
+    _rand_state                              0x2007c01c   Data           4  rand.o(.data)
+    .bss                                     0x2007c020   Section       64  usbcore.o(.bss)
+    .bss                                     0x2007c060   Section      128  usbhw.o(.bss)
+    STACK                                    0x2007c0e0   Section      512  startup_lpc17xx.o(STACK)
+    USB_RAM                                  0x2007c2e0   Section      544  usbhw.o(USB_RAM)
 
     Global Symbols
 
@@ -1079,7 +1079,6 @@ Image Symbol Table
     _printf_wctomb                           0x00000000   Number         0  stubs.o ABSOLUTE
     _printf_widthprec                        0x00000000   Number         0  stubs.o ABSOLUTE
     _printf_x                                0x00000000   Number         0  stubs.o ABSOLUTE
-    __arm_fini_                               - Undefined Weak Reference
     __cpp_initialize__aeabi_                  - Undefined Weak Reference
     __cxa_finalize                            - Undefined Weak Reference
     __decompress                              - Undefined Weak Reference
@@ -1092,183 +1091,182 @@ Image Symbol Table
     _main_clock                              0x000000d5   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
     _main_cpp_init                           0x000000d5   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
     _main_init                               0x000000d5   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
-    __rt_lib_shutdown_fini                   0x000000dd   Thumb Code     0  entry12b.o(.ARM.Collect$$$$0000000E)
-    __rt_final_cpp                           0x000000e1   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000F)
-    __rt_final_exit                          0x000000e1   Thumb Code     0  entry11a.o(.ARM.Collect$$$$00000011)
-    Reset_Handler                            0x000000e5   Thumb Code     8  startup_lpc17xx.o(.text)
-    NMI_Handler                              0x000000ed   Thumb Code     2  startup_lpc17xx.o(.text)
-    HardFault_Handler                        0x000000ef   Thumb Code     2  startup_lpc17xx.o(.text)
-    MemManage_Handler                        0x000000f1   Thumb Code     2  startup_lpc17xx.o(.text)
-    BusFault_Handler                         0x000000f3   Thumb Code     2  startup_lpc17xx.o(.text)
-    UsageFault_Handler                       0x000000f5   Thumb Code     2  startup_lpc17xx.o(.text)
-    SVC_Handler                              0x000000f7   Thumb Code     2  startup_lpc17xx.o(.text)
-    DebugMon_Handler                         0x000000f9   Thumb Code     2  startup_lpc17xx.o(.text)
-    PendSV_Handler                           0x000000fb   Thumb Code     2  startup_lpc17xx.o(.text)
-    SysTick_Handler                          0x000000fd   Thumb Code     2  startup_lpc17xx.o(.text)
-    BOD_IRQHandler                           0x000000ff   Thumb Code     0  startup_lpc17xx.o(.text)
-    CANActivity_IRQHandler                   0x000000ff   Thumb Code     0  startup_lpc17xx.o(.text)
-    CAN_IRQHandler                           0x000000ff   Thumb Code     0  startup_lpc17xx.o(.text)
-    DMA_IRQHandler                           0x000000ff   Thumb Code     0  startup_lpc17xx.o(.text)
-    EINT0_IRQHandler                         0x000000ff   Thumb Code     0  startup_lpc17xx.o(.text)
-    EINT1_IRQHandler                         0x000000ff   Thumb Code     0  startup_lpc17xx.o(.text)
-    EINT2_IRQHandler                         0x000000ff   Thumb Code     0  startup_lpc17xx.o(.text)
-    EINT3_IRQHandler                         0x000000ff   Thumb Code     0  startup_lpc17xx.o(.text)
-    ENET_IRQHandler                          0x000000ff   Thumb Code     0  startup_lpc17xx.o(.text)
-    I2C0_IRQHandler                          0x000000ff   Thumb Code     0  startup_lpc17xx.o(.text)
-    I2C1_IRQHandler                          0x000000ff   Thumb Code     0  startup_lpc17xx.o(.text)
-    I2C2_IRQHandler                          0x000000ff   Thumb Code     0  startup_lpc17xx.o(.text)
-    I2S_IRQHandler                           0x000000ff   Thumb Code     0  startup_lpc17xx.o(.text)
-    MCPWM_IRQHandler                         0x000000ff   Thumb Code     0  startup_lpc17xx.o(.text)
-    PLL0_IRQHandler                          0x000000ff   Thumb Code     0  startup_lpc17xx.o(.text)
-    PLL1_IRQHandler                          0x000000ff   Thumb Code     0  startup_lpc17xx.o(.text)
-    PWM1_IRQHandler                          0x000000ff   Thumb Code     0  startup_lpc17xx.o(.text)
-    QEI_IRQHandler                           0x000000ff   Thumb Code     0  startup_lpc17xx.o(.text)
-    RIT_IRQHandler                           0x000000ff   Thumb Code     0  startup_lpc17xx.o(.text)
-    RTC_IRQHandler                           0x000000ff   Thumb Code     0  startup_lpc17xx.o(.text)
-    SPI_IRQHandler                           0x000000ff   Thumb Code     0  startup_lpc17xx.o(.text)
-    SSP0_IRQHandler                          0x000000ff   Thumb Code     0  startup_lpc17xx.o(.text)
-    SSP1_IRQHandler                          0x000000ff   Thumb Code     0  startup_lpc17xx.o(.text)
-    TIMER1_IRQHandler                        0x000000ff   Thumb Code     0  startup_lpc17xx.o(.text)
-    TIMER2_IRQHandler                        0x000000ff   Thumb Code     0  startup_lpc17xx.o(.text)
-    TIMER3_IRQHandler                        0x000000ff   Thumb Code     0  startup_lpc17xx.o(.text)
-    UART0_IRQHandler                         0x000000ff   Thumb Code     0  startup_lpc17xx.o(.text)
-    UART1_IRQHandler                         0x000000ff   Thumb Code     0  startup_lpc17xx.o(.text)
-    UART2_IRQHandler                         0x000000ff   Thumb Code     0  startup_lpc17xx.o(.text)
-    UART3_IRQHandler                         0x000000ff   Thumb Code     0  startup_lpc17xx.o(.text)
-    USBActivity_IRQHandler                   0x000000ff   Thumb Code     0  startup_lpc17xx.o(.text)
-    WDT_IRQHandler                           0x000000ff   Thumb Code     0  startup_lpc17xx.o(.text)
-    rand                                     0x00000109   Thumb Code    20  rand.o(.text)
-    srand                                    0x0000011d   Thumb Code     6  rand.o(.text)
-    __aeabi_uidiv                            0x0000012d   Thumb Code     0  uidiv.o(.text)
-    __aeabi_uidivmod                         0x0000012d   Thumb Code    44  uidiv.o(.text)
-    __scatterload                            0x00000159   Thumb Code    28  init.o(.text)
-    __scatterload_rt2                        0x00000159   Thumb Code     0  init.o(.text)
-    ADC_EP_GetRequest                        0x0000017d   Thumb Code     4  adcuser.o(i.ADC_EP_GetRequest)
-    ADC_EP_SetRequest                        0x00000181   Thumb Code     4  adcuser.o(i.ADC_EP_SetRequest)
-    ADC_IF_GetRequest                        0x00000185   Thumb Code   128  adcuser.o(i.ADC_IF_GetRequest)
-    ADC_IF_SetRequest                        0x00000215   Thumb Code    80  adcuser.o(i.ADC_IF_SetRequest)
-    ADC_IRQHandler                           0x00000275   Thumb Code    28  adc_mcb1700.o(i.ADC_IRQHandler)
-    EPAdr                                    0x0000029d   Thumb Code    16  usbhw.o(i.EPAdr)
-    GLCD_Clear                               0x000002ad   Thumb Code    42  glcd_spi_lpc1700.o(i.GLCD_Clear)
-    GLCD_SetBackColor                        0x000002d9   Thumb Code     6  glcd_spi_lpc1700.o(i.GLCD_SetBackColor)
-    GLCD_SetTextColor                        0x000002e5   Thumb Code     6  glcd_spi_lpc1700.o(i.GLCD_SetTextColor)
-    USB_DirCtrlEP                            0x000002f1   Thumb Code     2  usbhw.o(i.USB_DirCtrlEP)
-    USB_Reset_Event                          0x000002f3   Thumb Code     8  usbuser.o(i.USB_Reset_Event)
-    USB_Resume                               0x000002fb   Thumb Code     2  usbhw.o(i.USB_Resume)
+    __rt_final_cpp                           0x000000dd   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x000000dd   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    Reset_Handler                            0x000000e1   Thumb Code     8  startup_lpc17xx.o(.text)
+    NMI_Handler                              0x000000e9   Thumb Code     2  startup_lpc17xx.o(.text)
+    HardFault_Handler                        0x000000eb   Thumb Code     2  startup_lpc17xx.o(.text)
+    MemManage_Handler                        0x000000ed   Thumb Code     2  startup_lpc17xx.o(.text)
+    BusFault_Handler                         0x000000ef   Thumb Code     2  startup_lpc17xx.o(.text)
+    UsageFault_Handler                       0x000000f1   Thumb Code     2  startup_lpc17xx.o(.text)
+    SVC_Handler                              0x000000f3   Thumb Code     2  startup_lpc17xx.o(.text)
+    DebugMon_Handler                         0x000000f5   Thumb Code     2  startup_lpc17xx.o(.text)
+    PendSV_Handler                           0x000000f7   Thumb Code     2  startup_lpc17xx.o(.text)
+    SysTick_Handler                          0x000000f9   Thumb Code     2  startup_lpc17xx.o(.text)
+    BOD_IRQHandler                           0x000000fb   Thumb Code     0  startup_lpc17xx.o(.text)
+    CANActivity_IRQHandler                   0x000000fb   Thumb Code     0  startup_lpc17xx.o(.text)
+    CAN_IRQHandler                           0x000000fb   Thumb Code     0  startup_lpc17xx.o(.text)
+    DMA_IRQHandler                           0x000000fb   Thumb Code     0  startup_lpc17xx.o(.text)
+    EINT0_IRQHandler                         0x000000fb   Thumb Code     0  startup_lpc17xx.o(.text)
+    EINT1_IRQHandler                         0x000000fb   Thumb Code     0  startup_lpc17xx.o(.text)
+    EINT2_IRQHandler                         0x000000fb   Thumb Code     0  startup_lpc17xx.o(.text)
+    EINT3_IRQHandler                         0x000000fb   Thumb Code     0  startup_lpc17xx.o(.text)
+    ENET_IRQHandler                          0x000000fb   Thumb Code     0  startup_lpc17xx.o(.text)
+    I2C0_IRQHandler                          0x000000fb   Thumb Code     0  startup_lpc17xx.o(.text)
+    I2C1_IRQHandler                          0x000000fb   Thumb Code     0  startup_lpc17xx.o(.text)
+    I2C2_IRQHandler                          0x000000fb   Thumb Code     0  startup_lpc17xx.o(.text)
+    I2S_IRQHandler                           0x000000fb   Thumb Code     0  startup_lpc17xx.o(.text)
+    MCPWM_IRQHandler                         0x000000fb   Thumb Code     0  startup_lpc17xx.o(.text)
+    PLL0_IRQHandler                          0x000000fb   Thumb Code     0  startup_lpc17xx.o(.text)
+    PLL1_IRQHandler                          0x000000fb   Thumb Code     0  startup_lpc17xx.o(.text)
+    PWM1_IRQHandler                          0x000000fb   Thumb Code     0  startup_lpc17xx.o(.text)
+    QEI_IRQHandler                           0x000000fb   Thumb Code     0  startup_lpc17xx.o(.text)
+    RIT_IRQHandler                           0x000000fb   Thumb Code     0  startup_lpc17xx.o(.text)
+    RTC_IRQHandler                           0x000000fb   Thumb Code     0  startup_lpc17xx.o(.text)
+    SPI_IRQHandler                           0x000000fb   Thumb Code     0  startup_lpc17xx.o(.text)
+    SSP0_IRQHandler                          0x000000fb   Thumb Code     0  startup_lpc17xx.o(.text)
+    SSP1_IRQHandler                          0x000000fb   Thumb Code     0  startup_lpc17xx.o(.text)
+    TIMER1_IRQHandler                        0x000000fb   Thumb Code     0  startup_lpc17xx.o(.text)
+    TIMER2_IRQHandler                        0x000000fb   Thumb Code     0  startup_lpc17xx.o(.text)
+    TIMER3_IRQHandler                        0x000000fb   Thumb Code     0  startup_lpc17xx.o(.text)
+    UART0_IRQHandler                         0x000000fb   Thumb Code     0  startup_lpc17xx.o(.text)
+    UART1_IRQHandler                         0x000000fb   Thumb Code     0  startup_lpc17xx.o(.text)
+    UART2_IRQHandler                         0x000000fb   Thumb Code     0  startup_lpc17xx.o(.text)
+    UART3_IRQHandler                         0x000000fb   Thumb Code     0  startup_lpc17xx.o(.text)
+    USBActivity_IRQHandler                   0x000000fb   Thumb Code     0  startup_lpc17xx.o(.text)
+    WDT_IRQHandler                           0x000000fb   Thumb Code     0  startup_lpc17xx.o(.text)
+    rand                                     0x00000105   Thumb Code    20  rand.o(.text)
+    srand                                    0x00000119   Thumb Code     6  rand.o(.text)
+    __aeabi_uidiv                            0x00000129   Thumb Code     0  uidiv.o(.text)
+    __aeabi_uidivmod                         0x00000129   Thumb Code    44  uidiv.o(.text)
+    __scatterload                            0x00000155   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x00000155   Thumb Code     0  init.o(.text)
+    ADC_EP_GetRequest                        0x00000179   Thumb Code     4  adcuser.o(i.ADC_EP_GetRequest)
+    ADC_EP_SetRequest                        0x0000017d   Thumb Code     4  adcuser.o(i.ADC_EP_SetRequest)
+    ADC_IF_GetRequest                        0x00000181   Thumb Code   128  adcuser.o(i.ADC_IF_GetRequest)
+    ADC_IF_SetRequest                        0x00000211   Thumb Code    80  adcuser.o(i.ADC_IF_SetRequest)
+    ADC_IRQHandler                           0x00000271   Thumb Code    28  adc_mcb1700.o(i.ADC_IRQHandler)
+    EPAdr                                    0x00000299   Thumb Code    16  usbhw.o(i.EPAdr)
+    GLCD_Bitmap                              0x000002a9   Thumb Code    82  glcd_spi_lpc1700.o(i.GLCD_Bitmap)
+    USB_DirCtrlEP                            0x000002fb   Thumb Code     2  usbhw.o(i.USB_DirCtrlEP)
     Flappy_Run                               0x00000301   Thumb Code   484  flappy.o(i.Flappy_Run)
     GLCD_Bargraph                            0x000004f1   Thumb Code    98  glcd_spi_lpc1700.o(i.GLCD_Bargraph)
-    GLCD_Bitmap                              0x00000559   Thumb Code    82  glcd_spi_lpc1700.o(i.GLCD_Bitmap)
-    GLCD_ClearLn                             0x000005ab   Thumb Code    94  glcd_spi_lpc1700.o(i.GLCD_ClearLn)
-    GLCD_DisplayChar                         0x00000609   Thumb Code    84  glcd_spi_lpc1700.o(i.GLCD_DisplayChar)
-    GLCD_DisplayString                       0x00000665   Thumb Code    40  glcd_spi_lpc1700.o(i.GLCD_DisplayString)
-    GLCD_DrawChar                            0x0000068d   Thumb Code   150  glcd_spi_lpc1700.o(i.GLCD_DrawChar)
-    GLCD_Init                                0x00000729   Thumb Code  1506  glcd_spi_lpc1700.o(i.GLCD_Init)
-    GLCD_SetWindow                           0x00000d11   Thumb Code   168  glcd_spi_lpc1700.o(i.GLCD_SetWindow)
-    GLCD_WindowMax                           0x00000dbd   Thumb Code    18  glcd_spi_lpc1700.o(i.GLCD_WindowMax)
-    GPIO_PinWrite                            0x00000dd1   Thumb Code    36  gpio_lpc17xx.o(i.GPIO_PinWrite)
-    GPIO_PortClock                           0x00000df9   Thumb Code    38  gpio_lpc17xx.o(i.GPIO_PortClock)
-    GPIO_SetDir                              0x00000e25   Thumb Code    52  gpio_lpc17xx.o(i.GPIO_SetDir)
-    Gallery                                  0x00000e5d   Thumb Code   142  gallery.o(i.Gallery)
-    KBD_Init                                 0x00000ef5   Thumb Code    42  kbd.o(i.KBD_Init)
-    KBD_get                                  0x00000f31   Thumb Code    12  kbd.o(i.KBD_get)
-    LED_Initialize                           0x00000f41   Thumb Code    88  led_mcb1700.o(i.LED_Initialize)
-    PIN_Configure                            0x00000f9d   Thumb Code   246  pin_lpc17xx.o(i.PIN_Configure)
-    RdCmdDat                                 0x00001099   Thumb Code    38  usbhw.o(i.RdCmdDat)
-    SystemClockUpdate                        0x000010c9   Thumb Code   302  system_lpc17xx.o(i.SystemClockUpdate)
-    SystemInit                               0x00001209   Thumb Code   302  system_lpc17xx.o(i.SystemInit)
-    TIMER0_IRQHandler                        0x00001349   Thumb Code   290  player.o(i.TIMER0_IRQHandler)
-    USB_ClrStallEP                           0x0000149d   Thumb Code    26  usbhw.o(i.USB_ClrStallEP)
-    USB_ConfigEP                             0x000014bd   Thumb Code    68  usbhw.o(i.USB_ConfigEP)
-    USB_Configure                            0x00001509   Thumb Code    60  usbhw.o(i.USB_Configure)
-    USB_Connect                              0x0000154d   Thumb Code    28  usbhw.o(i.USB_Connect)
-    USB_DMA_BufAdr                           0x0000156d   Thumb Code    30  usbhw.o(i.USB_DMA_BufAdr)
-    USB_DMA_Enable                           0x00001591   Thumb Code    20  usbhw.o(i.USB_DMA_Enable)
-    USB_DMA_Setup                            0x000015a9   Thumb Code   248  usbhw.o(i.USB_DMA_Setup)
-    USB_DataInStage                          0x000016b5   Thumb Code    52  usbcore.o(i.USB_DataInStage)
-    USB_DataOutStage                         0x000016ed   Thumb Code    34  usbcore.o(i.USB_DataOutStage)
-    USB_DisableEP                            0x00001715   Thumb Code    26  usbhw.o(i.USB_DisableEP)
-    USB_EnableEP                             0x00001739   Thumb Code    26  usbhw.o(i.USB_EnableEP)
-    USB_EndPoint0                            0x00001759   Thumb Code   786  usbcore.o(i.USB_EndPoint0)
-    USB_EndPoint3                            0x00001a89   Thumb Code   164  usbuser.o(i.USB_EndPoint3)
-    USB_IRQHandler                           0x00001b41   Thumb Code   518  usbhw.o(i.USB_IRQHandler)
-    USB_Init                                 0x00001d5d   Thumb Code   154  usbhw.o(i.USB_Init)
-    USB_ReadEP                               0x00001e0d   Thumb Code    94  usbhw.o(i.USB_ReadEP)
-    USB_ReqGetDescriptor                     0x00001e79   Thumb Code   164  usbcore.o(i.USB_ReqGetDescriptor)
-    USB_ReqGetStatus                         0x00001f31   Thumb Code   160  usbcore.o(i.USB_ReqGetStatus)
-    USB_ReqSetClrFeature                     0x00001ff1   Thumb Code   210  usbcore.o(i.USB_ReqSetClrFeature)
-    USB_ReqSetConfiguration                  0x000020dd   Thumb Code   402  usbcore.o(i.USB_ReqSetConfiguration)
-    USB_ReqSetInterface                      0x00002295   Thumb Code   278  usbcore.o(i.USB_ReqSetInterface)
-    USB_Reset                                0x000023c5   Thumb Code   172  usbhw.o(i.USB_Reset)
-    USB_ResetCore                            0x00002489   Thumb Code    34  usbcore.o(i.USB_ResetCore)
-    USB_ResetEP                              0x000024c5   Thumb Code    26  usbhw.o(i.USB_ResetEP)
-    USB_SOF_Event                            0x000024e5   Thumb Code     2  usbuser.o(i.USB_SOF_Event)
-    USB_SetAddress                           0x000024e9   Thumb Code    42  usbhw.o(i.USB_SetAddress)
-    USB_SetStallEP                           0x00002519   Thumb Code    26  usbhw.o(i.USB_SetStallEP)
-    USB_SetupStage                           0x0000253d   Thumb Code    12  usbcore.o(i.USB_SetupStage)
-    USB_StatusInStage                        0x0000254d   Thumb Code    14  usbcore.o(i.USB_StatusInStage)
-    USB_StatusOutStage                       0x0000255d   Thumb Code    12  usbcore.o(i.USB_StatusOutStage)
-    USB_Suspend                              0x0000256d   Thumb Code     2  usbhw.o(i.USB_Suspend)
-    USB_WakeUpCfg                            0x0000256f   Thumb Code     2  usbhw.o(i.USB_WakeUpCfg)
-    USB_WriteEP                              0x00002571   Thumb Code    70  usbhw.o(i.USB_WriteEP)
-    WrCmd                                    0x000025c5   Thumb Code    30  usbhw.o(i.WrCmd)
-    WrCmdDat                                 0x000025ed   Thumb Code    58  usbhw.o(i.WrCmdDat)
-    WrCmdEP                                  0x00002631   Thumb Code    78  usbhw.o(i.WrCmdEP)
-    __0snprintf$6                            0x00002689   Thumb Code    48  printf6.o(i.__0snprintf$6)
-    __1snprintf$6                            0x00002689   Thumb Code     0  printf6.o(i.__0snprintf$6)
-    __2snprintf                              0x00002689   Thumb Code     0  printf6.o(i.__0snprintf$6)
-    __0sprintf$6                             0x000026bd   Thumb Code    34  printf6.o(i.__0sprintf$6)
-    __1sprintf$6                             0x000026bd   Thumb Code     0  printf6.o(i.__0sprintf$6)
-    __2sprintf                               0x000026bd   Thumb Code     0  printf6.o(i.__0sprintf$6)
-    __scatterload_copy                       0x00002721   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x0000272f   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x00002731   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    get_button                               0x00002d65   Thumb Code    20  kbd.o(i.get_button)
-    initMenu                                 0x00002e1d   Thumb Code    52  menu.o(i.initMenu)
-    main                                     0x00002e61   Thumb Code   102  main.o(i.main)
-    runMenu                                  0x000030dd   Thumb Code   180  menu.o(i.runMenu)
-    runMusicPlayer                           0x000031a5   Thumb Code   286  player.o(i.runMusicPlayer)
-    selectMenu                               0x00003315   Thumb Code   154  menu.o(i.selectMenu)
-    Font_6x8_h                               0x0000356c   Data         896  glcd_spi_lpc1700.o(.constdata)
-    Font_16x24_h                             0x000038ec   Data        5376  glcd_spi_lpc1700.o(.constdata)
-    USB_DeviceDescriptor                     0x0004fdec   Data          18  usbdesc.o(.constdata)
-    USB_ConfigDescriptor                     0x0004fdfe   Data         110  usbdesc.o(.constdata)
-    USB_StringDescriptor                     0x0004fe6c   Data         100  usbdesc.o(.constdata)
-    DDAdr                                    0x0004fed0   Data           8  usbhw.o(.constdata)
-    DDSz                                     0x0004fed8   Data           8  usbhw.o(.constdata)
-    USB_P_EP                                 0x0004fee0   Data          64  usbuser.o(.constdata)
-    EventRecorderInfo                        0x0004ff30   Data          24  eventrecorder.o(.constdata)
-    Region$$Table$$Base                      0x0004ff48   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x0004ff68   Number         0  anon$$obj.o(Region$$Table)
-    Mute                                     0x10000000   Data           1  player.o(.data)
-    Volume                                   0x10000004   Data           4  player.o(.data)
-    InfoBuf                                  0x1000000c   Data           4  player.o(.data)
-    DataBuf                                  0x10000010   Data           4  player.o(.data)
-    DataOut                                  0x10000014   Data           2  player.o(.data)
-    DataIn                                   0x10000016   Data           2  player.o(.data)
-    DataRun                                  0x10000018   Data           1  player.o(.data)
-    PotVal                                   0x1000001a   Data           2  player.o(.data)
-    VUM                                      0x1000001c   Data           4  player.o(.data)
-    Tick                                     0x10000020   Data           4  player.o(.data)
-    USB_DeviceStatus                         0x10000028   Data           2  usbcore.o(.data)
-    USB_DeviceAddress                        0x1000002a   Data           1  usbcore.o(.data)
-    USB_Configuration                        0x1000002b   Data           1  usbcore.o(.data)
-    USB_EndPointMask                         0x1000002c   Data           4  usbcore.o(.data)
-    USB_EndPointHalt                         0x10000030   Data           4  usbcore.o(.data)
-    USB_EndPointStall                        0x10000034   Data           4  usbcore.o(.data)
-    USB_NumInterfaces                        0x10000038   Data           1  usbcore.o(.data)
-    USB_AltSetting                           0x10000039   Data           4  usbcore.o(.data)
-    EP0Data                                  0x10000040   Data           8  usbcore.o(.data)
-    SetupPacket                              0x10000048   Data           8  usbcore.o(.data)
-    SystemCoreClock                          0x10000054   Data           4  system_lpc17xx.o(.data)
-    SystemFrequency                          0x10000058   Data           4  system_lpc17xx.o(.data)
-    DDMemMap                                 0x2007c018   Data           8  usbhw.o(.data)
-    VolCur                                   0x2007c020   Data           2  adcuser.o(.data)
-    EP0Buf                                   0x2007c024   Data          64  usbcore.o(.bss)
-    udca                                     0x2007c064   Data         128  usbhw.o(.bss)
-    UDCA                                     0x2007c2e8   Data         128  usbhw.o(USB_RAM)
-    __initial_sp                             0x2007c2e8   Data           0  startup_lpc17xx.o(STACK)
-    DD_NISO_Mem                              0x2007c368   Data         256  usbhw.o(USB_RAM)
-    DD_ISO_Mem                               0x2007c468   Data         160  usbhw.o(USB_RAM)
+    GLCD_Clear                               0x00000559   Thumb Code    42  glcd_spi_lpc1700.o(i.GLCD_Clear)
+    GLCD_ClearLn                             0x00000583   Thumb Code    94  glcd_spi_lpc1700.o(i.GLCD_ClearLn)
+    GLCD_DisplayChar                         0x000005e1   Thumb Code    84  glcd_spi_lpc1700.o(i.GLCD_DisplayChar)
+    GLCD_DisplayString                       0x0000063d   Thumb Code    40  glcd_spi_lpc1700.o(i.GLCD_DisplayString)
+    GLCD_DrawChar                            0x00000665   Thumb Code   150  glcd_spi_lpc1700.o(i.GLCD_DrawChar)
+    GLCD_Init                                0x00000701   Thumb Code  1506  glcd_spi_lpc1700.o(i.GLCD_Init)
+    GLCD_SetBackColor                        0x00000ce9   Thumb Code     6  glcd_spi_lpc1700.o(i.GLCD_SetBackColor)
+    GLCD_SetTextColor                        0x00000cf5   Thumb Code     6  glcd_spi_lpc1700.o(i.GLCD_SetTextColor)
+    GLCD_SetWindow                           0x00000d01   Thumb Code   168  glcd_spi_lpc1700.o(i.GLCD_SetWindow)
+    GLCD_WindowMax                           0x00000dad   Thumb Code    18  glcd_spi_lpc1700.o(i.GLCD_WindowMax)
+    GPIO_PinWrite                            0x00000dc1   Thumb Code    36  gpio_lpc17xx.o(i.GPIO_PinWrite)
+    GPIO_PortClock                           0x00000de9   Thumb Code    38  gpio_lpc17xx.o(i.GPIO_PortClock)
+    GPIO_SetDir                              0x00000e15   Thumb Code    52  gpio_lpc17xx.o(i.GPIO_SetDir)
+    Gallery                                  0x00000e4d   Thumb Code   142  gallery.o(i.Gallery)
+    KBD_Init                                 0x00000ee5   Thumb Code    42  kbd.o(i.KBD_Init)
+    KBD_get                                  0x00000f21   Thumb Code    12  kbd.o(i.KBD_get)
+    LED_Initialize                           0x00000f31   Thumb Code    88  led_mcb1700.o(i.LED_Initialize)
+    PIN_Configure                            0x00000f8d   Thumb Code   246  pin_lpc17xx.o(i.PIN_Configure)
+    RdCmdDat                                 0x00001089   Thumb Code    38  usbhw.o(i.RdCmdDat)
+    SystemClockUpdate                        0x000010b9   Thumb Code   302  system_lpc17xx.o(i.SystemClockUpdate)
+    SystemInit                               0x000011f9   Thumb Code   302  system_lpc17xx.o(i.SystemInit)
+    TIMER0_IRQHandler                        0x00001339   Thumb Code   256  player.o(i.TIMER0_IRQHandler)
+    USB_ClrStallEP                           0x00001469   Thumb Code    26  usbhw.o(i.USB_ClrStallEP)
+    USB_ConfigEP                             0x00001489   Thumb Code    68  usbhw.o(i.USB_ConfigEP)
+    USB_Configure                            0x000014d5   Thumb Code    60  usbhw.o(i.USB_Configure)
+    USB_Connect                              0x00001519   Thumb Code    28  usbhw.o(i.USB_Connect)
+    USB_DMA_BufAdr                           0x00001539   Thumb Code    30  usbhw.o(i.USB_DMA_BufAdr)
+    USB_DMA_Enable                           0x0000155d   Thumb Code    20  usbhw.o(i.USB_DMA_Enable)
+    USB_DMA_Setup                            0x00001575   Thumb Code   248  usbhw.o(i.USB_DMA_Setup)
+    USB_DataInStage                          0x00001681   Thumb Code    52  usbcore.o(i.USB_DataInStage)
+    USB_DataOutStage                         0x000016b9   Thumb Code    34  usbcore.o(i.USB_DataOutStage)
+    USB_DisableEP                            0x000016e1   Thumb Code    26  usbhw.o(i.USB_DisableEP)
+    USB_EnableEP                             0x00001705   Thumb Code    26  usbhw.o(i.USB_EnableEP)
+    USB_EndPoint0                            0x00001725   Thumb Code   786  usbcore.o(i.USB_EndPoint0)
+    USB_EndPoint3                            0x00001a55   Thumb Code   164  usbuser.o(i.USB_EndPoint3)
+    USB_IRQHandler                           0x00001b0d   Thumb Code   518  usbhw.o(i.USB_IRQHandler)
+    USB_Init                                 0x00001d29   Thumb Code   154  usbhw.o(i.USB_Init)
+    USB_ReadEP                               0x00001dd9   Thumb Code    94  usbhw.o(i.USB_ReadEP)
+    USB_ReqGetDescriptor                     0x00001e45   Thumb Code   164  usbcore.o(i.USB_ReqGetDescriptor)
+    USB_ReqGetStatus                         0x00001efd   Thumb Code   160  usbcore.o(i.USB_ReqGetStatus)
+    USB_ReqSetClrFeature                     0x00001fbd   Thumb Code   210  usbcore.o(i.USB_ReqSetClrFeature)
+    USB_ReqSetConfiguration                  0x000020a9   Thumb Code   402  usbcore.o(i.USB_ReqSetConfiguration)
+    USB_ReqSetInterface                      0x00002261   Thumb Code   278  usbcore.o(i.USB_ReqSetInterface)
+    USB_Reset                                0x00002391   Thumb Code   172  usbhw.o(i.USB_Reset)
+    USB_ResetCore                            0x00002455   Thumb Code    34  usbcore.o(i.USB_ResetCore)
+    USB_ResetEP                              0x00002491   Thumb Code    26  usbhw.o(i.USB_ResetEP)
+    USB_Reset_Event                          0x000024b1   Thumb Code     8  usbuser.o(i.USB_Reset_Event)
+    USB_Resume                               0x000024b9   Thumb Code     2  usbhw.o(i.USB_Resume)
+    USB_SOF_Event                            0x000024bb   Thumb Code     2  usbuser.o(i.USB_SOF_Event)
+    USB_SetAddress                           0x000024bd   Thumb Code    42  usbhw.o(i.USB_SetAddress)
+    USB_SetStallEP                           0x000024ed   Thumb Code    26  usbhw.o(i.USB_SetStallEP)
+    USB_SetupStage                           0x00002511   Thumb Code    12  usbcore.o(i.USB_SetupStage)
+    USB_StatusInStage                        0x00002521   Thumb Code    14  usbcore.o(i.USB_StatusInStage)
+    USB_StatusOutStage                       0x00002531   Thumb Code    12  usbcore.o(i.USB_StatusOutStage)
+    USB_Suspend                              0x00002541   Thumb Code     2  usbhw.o(i.USB_Suspend)
+    USB_WakeUpCfg                            0x00002543   Thumb Code     2  usbhw.o(i.USB_WakeUpCfg)
+    USB_WriteEP                              0x00002545   Thumb Code    70  usbhw.o(i.USB_WriteEP)
+    WrCmd                                    0x00002599   Thumb Code    30  usbhw.o(i.WrCmd)
+    WrCmdDat                                 0x000025c1   Thumb Code    58  usbhw.o(i.WrCmdDat)
+    WrCmdEP                                  0x00002605   Thumb Code    78  usbhw.o(i.WrCmdEP)
+    __0snprintf$6                            0x0000265d   Thumb Code    44  printf6.o(i.__0snprintf$6)
+    __1snprintf$6                            0x0000265d   Thumb Code     0  printf6.o(i.__0snprintf$6)
+    __2snprintf                              0x0000265d   Thumb Code     0  printf6.o(i.__0snprintf$6)
+    __0sprintf$6                             0x0000268d   Thumb Code    34  printf6.o(i.__0sprintf$6)
+    __1sprintf$6                             0x0000268d   Thumb Code     0  printf6.o(i.__0sprintf$6)
+    __2sprintf                               0x0000268d   Thumb Code     0  printf6.o(i.__0sprintf$6)
+    __scatterload_copy                       0x000026d9   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x000026e7   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x000026e9   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    get_button                               0x00002e6d   Thumb Code    20  kbd.o(i.get_button)
+    initMenu                                 0x00002f25   Thumb Code    52  menu.o(i.initMenu)
+    main                                     0x00002f71   Thumb Code   102  main.o(i.main)
+    runMenu                                  0x00003135   Thumb Code   180  menu.o(i.runMenu)
+    runMusicPlayer                           0x000031fd   Thumb Code   336  player.o(i.runMusicPlayer)
+    selectMenu                               0x000033cd   Thumb Code   154  menu.o(i.selectMenu)
+    Font_6x8_h                               0x00003658   Data         896  glcd_spi_lpc1700.o(.constdata)
+    Font_16x24_h                             0x000039d8   Data        5376  glcd_spi_lpc1700.o(.constdata)
+    USB_DeviceDescriptor                     0x000675d9   Data          18  usbdesc.o(.constdata)
+    USB_ConfigDescriptor                     0x000675eb   Data         110  usbdesc.o(.constdata)
+    USB_StringDescriptor                     0x00067659   Data         100  usbdesc.o(.constdata)
+    DDAdr                                    0x000676c0   Data           8  usbhw.o(.constdata)
+    DDSz                                     0x000676c8   Data           8  usbhw.o(.constdata)
+    USB_P_EP                                 0x000676d0   Data          64  usbuser.o(.constdata)
+    EventRecorderInfo                        0x00067720   Data          24  eventrecorder.o(.constdata)
+    Region$$Table$$Base                      0x00067738   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00067758   Number         0  anon$$obj.o(Region$$Table)
+    Mute                                     0x10000008   Data           1  player.o(.data)
+    Volume                                   0x1000000c   Data           4  player.o(.data)
+    InfoBuf                                  0x10000010   Data           4  player.o(.data)
+    DataBuf                                  0x10000014   Data           4  player.o(.data)
+    DataOut                                  0x10000018   Data           2  player.o(.data)
+    DataIn                                   0x1000001a   Data           2  player.o(.data)
+    DataRun                                  0x1000001c   Data           1  player.o(.data)
+    PotVal                                   0x1000001e   Data           2  player.o(.data)
+    VUM                                      0x10000020   Data           4  player.o(.data)
+    Tick                                     0x10000024   Data           4  player.o(.data)
+    USB_DeviceStatus                         0x1000002c   Data           2  usbcore.o(.data)
+    USB_DeviceAddress                        0x1000002e   Data           1  usbcore.o(.data)
+    USB_Configuration                        0x1000002f   Data           1  usbcore.o(.data)
+    USB_EndPointMask                         0x10000030   Data           4  usbcore.o(.data)
+    USB_EndPointHalt                         0x10000034   Data           4  usbcore.o(.data)
+    USB_EndPointStall                        0x10000038   Data           4  usbcore.o(.data)
+    USB_NumInterfaces                        0x1000003c   Data           1  usbcore.o(.data)
+    USB_AltSetting                           0x1000003d   Data           4  usbcore.o(.data)
+    EP0Data                                  0x10000044   Data           8  usbcore.o(.data)
+    SetupPacket                              0x1000004c   Data           8  usbcore.o(.data)
+    DDMemMap                                 0x10000054   Data           8  usbhw.o(.data)
+    VolCur                                   0x2007c010   Data           2  adcuser.o(.data)
+    SystemCoreClock                          0x2007c014   Data           4  system_lpc17xx.o(.data)
+    SystemFrequency                          0x2007c018   Data           4  system_lpc17xx.o(.data)
+    EP0Buf                                   0x2007c020   Data          64  usbcore.o(.bss)
+    udca                                     0x2007c060   Data         128  usbhw.o(.bss)
+    UDCA                                     0x2007c2e0   Data         128  usbhw.o(USB_RAM)
+    __initial_sp                             0x2007c2e0   Data           0  startup_lpc17xx.o(STACK)
+    DD_NISO_Mem                              0x2007c360   Data         256  usbhw.o(USB_RAM)
+    DD_ISO_Mem                               0x2007c460   Data         160  usbhw.o(USB_RAM)
 
 
 
@@ -1278,189 +1276,268 @@ Memory Map of the image
 
   Image Entry point : 0x000000cd
 
-  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x0004ffec, Max: 0x00080000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x000677d8, Max: 0x00080000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x0004ff68, Max: 0x00080000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00067758, Max: 0x00080000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x00000000   0x00000000   0x000000cc   Data   RO         1426    RESET               startup_lpc17xx.o
-    0x000000cc   0x000000cc   0x00000000   Code   RO         1476  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x000000cc   0x000000cc   0x00000004   Code   RO         1751    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x000000d0   0x000000d0   0x00000004   Code   RO         1754    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x000000d4   0x000000d4   0x00000000   Code   RO         1756    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x000000d4   0x000000d4   0x00000000   Code   RO         1758    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x000000d4   0x000000d4   0x00000008   Code   RO         1759    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x000000dc   0x000000dc   0x00000004   Code   RO         1766    .ARM.Collect$$$$0000000E  mc_w.l(entry12b.o)
-    0x000000e0   0x000000e0   0x00000000   Code   RO         1761    .ARM.Collect$$$$0000000F  mc_w.l(entry10a.o)
-    0x000000e0   0x000000e0   0x00000000   Code   RO         1763    .ARM.Collect$$$$00000011  mc_w.l(entry11a.o)
-    0x000000e0   0x000000e0   0x00000004   Code   RO         1752    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
-    0x000000e4   0x000000e4   0x00000024   Code   RO         1428    .text               startup_lpc17xx.o
-    0x00000108   0x00000108   0x00000024   Code   RO         1481    .text               mc_w.l(rand.o)
-    0x0000012c   0x0000012c   0x0000002c   Code   RO         1770    .text               mc_w.l(uidiv.o)
-    0x00000158   0x00000158   0x00000024   Code   RO         1787    .text               mc_w.l(init.o)
-    0x0000017c   0x0000017c   0x00000004   Code   RO         1025    i.ADC_EP_GetRequest  adcuser.o
-    0x00000180   0x00000180   0x00000004   Code   RO         1026    i.ADC_EP_SetRequest  adcuser.o
-    0x00000184   0x00000184   0x00000090   Code   RO         1027    i.ADC_IF_GetRequest  adcuser.o
-    0x00000214   0x00000214   0x00000060   Code   RO         1028    i.ADC_IF_SetRequest  adcuser.o
-    0x00000274   0x00000274   0x00000028   Code   RO         1069    i.ADC_IRQHandler    adc_mcb1700.o
-    0x0000029c   0x0000029c   0x00000010   Code   RO          691    i.EPAdr             usbhw.o
-    0x000002ac   0x000002ac   0x0000002a   Code   RO           90    i.GLCD_Clear        glcd_spi_lpc1700.o
-    0x000002d6   0x000002d6   0x00000002   PAD
-    0x000002d8   0x000002d8   0x0000000c   Code   RO           98    i.GLCD_SetBackColor  glcd_spi_lpc1700.o
-    0x000002e4   0x000002e4   0x0000000c   Code   RO           99    i.GLCD_SetTextColor  glcd_spi_lpc1700.o
-    0x000002f0   0x000002f0   0x00000002   Code   RO          704    i.USB_DirCtrlEP     usbhw.o
-    0x000002f2   0x000002f2   0x00000008   Code   RO          926    i.USB_Reset_Event   usbuser.o
-    0x000002fa   0x000002fa   0x00000002   Code   RO          713    i.USB_Resume        usbhw.o
-    0x000002fc   0x000002fc   0x00000004   Code   RO         1427    .ARM.__at_0x02FC    startup_lpc17xx.o
-    0x00000300   0x00000300   0x000001f0   Code   RO          490    i.Flappy_Run        flappy.o
+    0x00000000   0x00000000   0x000000cc   Data   RO         1439    RESET               startup_lpc17xx.o
+    0x000000cc   0x000000cc   0x00000000   Code   RO         1489  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x000000cc   0x000000cc   0x00000004   Code   RO         1764    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x000000d0   0x000000d0   0x00000004   Code   RO         1767    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x000000d4   0x000000d4   0x00000000   Code   RO         1769    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x000000d4   0x000000d4   0x00000000   Code   RO         1771    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x000000d4   0x000000d4   0x00000008   Code   RO         1772    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x000000dc   0x000000dc   0x00000000   Code   RO         1774    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x000000dc   0x000000dc   0x00000000   Code   RO         1776    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x000000dc   0x000000dc   0x00000004   Code   RO         1765    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x000000e0   0x000000e0   0x00000024   Code   RO         1441    .text               startup_lpc17xx.o
+    0x00000104   0x00000104   0x00000024   Code   RO         1494    .text               mc_w.l(rand.o)
+    0x00000128   0x00000128   0x0000002c   Code   RO         1781    .text               mc_w.l(uidiv.o)
+    0x00000154   0x00000154   0x00000024   Code   RO         1798    .text               mc_w.l(init.o)
+    0x00000178   0x00000178   0x00000004   Code   RO         1038    i.ADC_EP_GetRequest  adcuser.o
+    0x0000017c   0x0000017c   0x00000004   Code   RO         1039    i.ADC_EP_SetRequest  adcuser.o
+    0x00000180   0x00000180   0x00000090   Code   RO         1040    i.ADC_IF_GetRequest  adcuser.o
+    0x00000210   0x00000210   0x00000060   Code   RO         1041    i.ADC_IF_SetRequest  adcuser.o
+    0x00000270   0x00000270   0x00000028   Code   RO         1082    i.ADC_IRQHandler    adc_mcb1700.o
+    0x00000298   0x00000298   0x00000010   Code   RO          704    i.EPAdr             usbhw.o
+    0x000002a8   0x000002a8   0x00000052   Code   RO           89    i.GLCD_Bitmap       glcd_spi_lpc1700.o
+    0x000002fa   0x000002fa   0x00000002   Code   RO          717    i.USB_DirCtrlEP     usbhw.o
+    0x000002fc   0x000002fc   0x00000004   Code   RO         1440    .ARM.__at_0x02FC    startup_lpc17xx.o
+    0x00000300   0x00000300   0x000001f0   Code   RO          498    i.Flappy_Run        flappy.o
     0x000004f0   0x000004f0   0x00000068   Code   RO           88    i.GLCD_Bargraph     glcd_spi_lpc1700.o
-    0x00000558   0x00000558   0x00000052   Code   RO           89    i.GLCD_Bitmap       glcd_spi_lpc1700.o
-    0x000005aa   0x000005aa   0x0000005e   Code   RO           91    i.GLCD_ClearLn      glcd_spi_lpc1700.o
-    0x00000608   0x00000608   0x0000005c   Code   RO           92    i.GLCD_DisplayChar  glcd_spi_lpc1700.o
-    0x00000664   0x00000664   0x00000028   Code   RO           93    i.GLCD_DisplayString  glcd_spi_lpc1700.o
-    0x0000068c   0x0000068c   0x0000009c   Code   RO           94    i.GLCD_DrawChar     glcd_spi_lpc1700.o
-    0x00000728   0x00000728   0x000005e8   Code   RO           95    i.GLCD_Init         glcd_spi_lpc1700.o
-    0x00000d10   0x00000d10   0x000000ac   Code   RO          100    i.GLCD_SetWindow    glcd_spi_lpc1700.o
-    0x00000dbc   0x00000dbc   0x00000012   Code   RO          101    i.GLCD_WindowMax    glcd_spi_lpc1700.o
-    0x00000dce   0x00000dce   0x00000002   PAD
-    0x00000dd0   0x00000dd0   0x00000028   Code   RO         1338    i.GPIO_PinWrite     gpio_lpc17xx.o
-    0x00000df8   0x00000df8   0x0000002c   Code   RO         1339    i.GPIO_PortClock    gpio_lpc17xx.o
-    0x00000e24   0x00000e24   0x00000038   Code   RO         1342    i.GPIO_SetDir       gpio_lpc17xx.o
-    0x00000e5c   0x00000e5c   0x00000098   Code   RO          453    i.Gallery           gallery.o
-    0x00000ef4   0x00000ef4   0x0000003c   Code   RO            5    i.KBD_Init          kbd.o
-    0x00000f30   0x00000f30   0x00000010   Code   RO            6    i.KBD_get           kbd.o
-    0x00000f40   0x00000f40   0x0000005c   Code   RO         1140    i.LED_Initialize    led_mcb1700.o
-    0x00000f9c   0x00000f9c   0x000000fc   Code   RO         1391    i.PIN_Configure     pin_lpc17xx.o
-    0x00001098   0x00001098   0x00000030   Code   RO          692    i.RdCmdDat          usbhw.o
-    0x000010c8   0x000010c8   0x00000140   Code   RO         1437    i.SystemClockUpdate  system_lpc17xx.o
-    0x00001208   0x00001208   0x00000140   Code   RO         1439    i.SystemInit        system_lpc17xx.o
-    0x00001348   0x00001348   0x00000154   Code   RO          396    i.TIMER0_IRQHandler  player.o
-    0x0000149c   0x0000149c   0x00000020   Code   RO          694    i.USB_ClrStallEP    usbhw.o
-    0x000014bc   0x000014bc   0x0000004c   Code   RO          695    i.USB_ConfigEP      usbhw.o
-    0x00001508   0x00001508   0x00000044   Code   RO          696    i.USB_Configure     usbhw.o
-    0x0000154c   0x0000154c   0x00000020   Code   RO          697    i.USB_Connect       usbhw.o
-    0x0000156c   0x0000156c   0x00000024   Code   RO          698    i.USB_DMA_BufAdr    usbhw.o
-    0x00001590   0x00001590   0x00000018   Code   RO          701    i.USB_DMA_Enable    usbhw.o
-    0x000015a8   0x000015a8   0x0000010c   Code   RO          702    i.USB_DMA_Setup     usbhw.o
-    0x000016b4   0x000016b4   0x00000038   Code   RO          565    i.USB_DataInStage   usbcore.o
-    0x000016ec   0x000016ec   0x00000028   Code   RO          566    i.USB_DataOutStage  usbcore.o
-    0x00001714   0x00001714   0x00000024   Code   RO          705    i.USB_DisableEP     usbhw.o
-    0x00001738   0x00001738   0x00000020   Code   RO          706    i.USB_EnableEP      usbhw.o
-    0x00001758   0x00001758   0x00000330   Code   RO          567    i.USB_EndPoint0     usbcore.o
-    0x00001a88   0x00001a88   0x000000b8   Code   RO          919    i.USB_EndPoint3     usbuser.o
-    0x00001b40   0x00001b40   0x0000021c   Code   RO          708    i.USB_IRQHandler    usbhw.o
-    0x00001d5c   0x00001d5c   0x000000b0   Code   RO          709    i.USB_Init          usbhw.o
-    0x00001e0c   0x00001e0c   0x0000006c   Code   RO          710    i.USB_ReadEP        usbhw.o
-    0x00001e78   0x00001e78   0x000000b8   Code   RO          568    i.USB_ReqGetDescriptor  usbcore.o
-    0x00001f30   0x00001f30   0x000000c0   Code   RO          569    i.USB_ReqGetStatus  usbcore.o
-    0x00001ff0   0x00001ff0   0x000000ec   Code   RO          570    i.USB_ReqSetClrFeature  usbcore.o
-    0x000020dc   0x000020dc   0x000001b8   Code   RO          571    i.USB_ReqSetConfiguration  usbcore.o
-    0x00002294   0x00002294   0x00000130   Code   RO          572    i.USB_ReqSetInterface  usbcore.o
-    0x000023c4   0x000023c4   0x000000c4   Code   RO          711    i.USB_Reset         usbhw.o
-    0x00002488   0x00002488   0x0000003c   Code   RO          573    i.USB_ResetCore     usbcore.o
-    0x000024c4   0x000024c4   0x00000020   Code   RO          712    i.USB_ResetEP       usbhw.o
-    0x000024e4   0x000024e4   0x00000002   Code   RO          927    i.USB_SOF_Event     usbuser.o
-    0x000024e6   0x000024e6   0x00000002   PAD
-    0x000024e8   0x000024e8   0x00000030   Code   RO          714    i.USB_SetAddress    usbhw.o
-    0x00002518   0x00002518   0x00000024   Code   RO          715    i.USB_SetStallEP    usbhw.o
-    0x0000253c   0x0000253c   0x00000010   Code   RO          574    i.USB_SetupStage    usbcore.o
-    0x0000254c   0x0000254c   0x0000000e   Code   RO          575    i.USB_StatusInStage  usbcore.o
-    0x0000255a   0x0000255a   0x00000002   PAD
-    0x0000255c   0x0000255c   0x00000010   Code   RO          576    i.USB_StatusOutStage  usbcore.o
-    0x0000256c   0x0000256c   0x00000002   Code   RO          716    i.USB_Suspend       usbhw.o
-    0x0000256e   0x0000256e   0x00000002   Code   RO          718    i.USB_WakeUpCfg     usbhw.o
-    0x00002570   0x00002570   0x00000054   Code   RO          719    i.USB_WriteEP       usbhw.o
-    0x000025c4   0x000025c4   0x00000028   Code   RO          720    i.WrCmd             usbhw.o
-    0x000025ec   0x000025ec   0x00000044   Code   RO          721    i.WrCmdDat          usbhw.o
-    0x00002630   0x00002630   0x00000058   Code   RO          722    i.WrCmdEP           usbhw.o
-    0x00002688   0x00002688   0x00000034   Code   RO         1646    i.__0snprintf$6     mc_w.l(printf6.o)
-    0x000026bc   0x000026bc   0x00000028   Code   RO         1647    i.__0sprintf$6      mc_w.l(printf6.o)
-    0x000026e4   0x000026e4   0x0000003c   Code   RO          397    i.__NVIC_DisableIRQ  player.o
-    0x00002720   0x00002720   0x0000000e   Code   RO         1797    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x0000272e   0x0000272e   0x00000002   Code   RO         1798    i.__scatterload_null  mc_w.l(handlers.o)
-    0x00002730   0x00002730   0x0000000e   Code   RO         1799    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x0000273e   0x0000273e   0x00000002   PAD
-    0x00002740   0x00002740   0x000002f0   Code   RO         1652    i._printf_core      mc_w.l(printf6.o)
-    0x00002a30   0x00002a30   0x00000024   Code   RO         1653    i._printf_post_padding  mc_w.l(printf6.o)
-    0x00002a54   0x00002a54   0x0000002e   Code   RO         1654    i._printf_pre_padding  mc_w.l(printf6.o)
-    0x00002a82   0x00002a82   0x00000016   Code   RO         1655    i._snputc           mc_w.l(printf6.o)
-    0x00002a98   0x00002a98   0x0000000a   Code   RO         1656    i._sputc            mc_w.l(printf6.o)
-    0x00002aa2   0x00002aa2   0x00000002   PAD
-    0x00002aa4   0x00002aa4   0x00000024   Code   RO          491    i.clear_bird        flappy.o
-    0x00002ac8   0x00002ac8   0x0000005a   Code   RO          492    i.clear_pipe        flappy.o
-    0x00002b22   0x00002b22   0x00000002   PAD
-    0x00002b24   0x00002b24   0x00000050   Code   RO          493    i.collide           flappy.o
-    0x00002b74   0x00002b74   0x0000000e   Code   RO          104    i.delay             glcd_spi_lpc1700.o
-    0x00002b82   0x00002b82   0x00000002   PAD
-    0x00002b84   0x00002b84   0x00000028   Code   RO          494    i.draw_bird         flappy.o
-    0x00002bac   0x00002bac   0x00000062   Code   RO          495    i.draw_pipe         flappy.o
-    0x00002c0e   0x00002c0e   0x0000003e   Code   RO          496    i.draw_rect         flappy.o
-    0x00002c4c   0x00002c4c   0x000000bc   Code   RO          454    i.gallery_draw_current  gallery.o
-    0x00002d08   0x00002d08   0x0000005c   Code   RO          497    i.game_over_screen  flappy.o
-    0x00002d64   0x00002d64   0x00000014   Code   RO            7    i.get_button        kbd.o
-    0x00002d78   0x00002d78   0x00000044   Code   RO          398    i.get_potval        player.o
-    0x00002dbc   0x00002dbc   0x00000060   Code   RO          498    i.hud_draw          flappy.o
-    0x00002e1c   0x00002e1c   0x00000044   Code   RO          346    i.initMenu          menu.o
-    0x00002e60   0x00002e60   0x000000a0   Code   RO          277    i.main              main.o
-    0x00002f00   0x00002f00   0x000000b4   Code   RO          399    i.media_update_volume_ui  player.o
-    0x00002fb4   0x00002fb4   0x00000054   Code   RO          347    i.menu_footer       menu.o
-    0x00003008   0x00003008   0x0000008c   Code   RO          105    i.rd_id_man         glcd_spi_lpc1700.o
-    0x00003094   0x00003094   0x00000048   Code   RO          106    i.rd_reg            glcd_spi_lpc1700.o
-    0x000030dc   0x000030dc   0x000000c8   Code   RO          348    i.runMenu           menu.o
-    0x000031a4   0x000031a4   0x00000170   Code   RO          400    i.runMusicPlayer    player.o
-    0x00003314   0x00003314   0x000000cc   Code   RO          349    i.selectMenu        menu.o
-    0x000033e0   0x000033e0   0x00000020   Code   RO          107    i.spi_tran          glcd_spi_lpc1700.o
-    0x00003400   0x00003400   0x00000080   Code   RO          108    i.spi_tran_man      glcd_spi_lpc1700.o
-    0x00003480   0x00003480   0x00000036   Code   RO          455    i.ui_header         gallery.o
-    0x000034b6   0x000034b6   0x0000001c   Code   RO          499    i.wait_short        flappy.o
-    0x000034d2   0x000034d2   0x00000002   PAD
-    0x000034d4   0x000034d4   0x00000028   Code   RO          109    i.wr_cmd            glcd_spi_lpc1700.o
-    0x000034fc   0x000034fc   0x00000028   Code   RO          110    i.wr_dat            glcd_spi_lpc1700.o
-    0x00003524   0x00003524   0x00000012   Code   RO          111    i.wr_dat_only       glcd_spi_lpc1700.o
-    0x00003536   0x00003536   0x00000002   PAD
-    0x00003538   0x00003538   0x00000014   Code   RO          112    i.wr_dat_start      glcd_spi_lpc1700.o
-    0x0000354c   0x0000354c   0x0000000c   Code   RO          113    i.wr_dat_stop       glcd_spi_lpc1700.o
-    0x00003558   0x00003558   0x00000014   Code   RO          114    i.wr_reg            glcd_spi_lpc1700.o
-    0x0000356c   0x0000356c   0x00001880   Data   RO          115    .constdata          glcd_spi_lpc1700.o
-    0x00004dec   0x00004dec   0x0004b000   Data   RO          456    .constdata          gallery.o
-    0x0004fdec   0x0004fdec   0x000000e4   Data   RO          676    .constdata          usbdesc.o
-    0x0004fed0   0x0004fed0   0x00000010   Data   RO          724    .constdata          usbhw.o
-    0x0004fee0   0x0004fee0   0x00000040   Data   RO          928    .constdata          usbuser.o
-    0x0004ff20   0x0004ff20   0x00000010   Data   RO         1145    .constdata          led_mcb1700.o
-    0x0004ff30   0x0004ff30   0x00000018   Data   RO         1217    .constdata          eventrecorder.o
-    0x0004ff48   0x0004ff48   0x00000020   Data   RO         1795    Region$$Table       anon$$obj.o
+    0x00000558   0x00000558   0x0000002a   Code   RO           90    i.GLCD_Clear        glcd_spi_lpc1700.o
+    0x00000582   0x00000582   0x0000005e   Code   RO           91    i.GLCD_ClearLn      glcd_spi_lpc1700.o
+    0x000005e0   0x000005e0   0x0000005c   Code   RO           92    i.GLCD_DisplayChar  glcd_spi_lpc1700.o
+    0x0000063c   0x0000063c   0x00000028   Code   RO           93    i.GLCD_DisplayString  glcd_spi_lpc1700.o
+    0x00000664   0x00000664   0x0000009c   Code   RO           94    i.GLCD_DrawChar     glcd_spi_lpc1700.o
+    0x00000700   0x00000700   0x000005e8   Code   RO           95    i.GLCD_Init         glcd_spi_lpc1700.o
+    0x00000ce8   0x00000ce8   0x0000000c   Code   RO           98    i.GLCD_SetBackColor  glcd_spi_lpc1700.o
+    0x00000cf4   0x00000cf4   0x0000000c   Code   RO           99    i.GLCD_SetTextColor  glcd_spi_lpc1700.o
+    0x00000d00   0x00000d00   0x000000ac   Code   RO          100    i.GLCD_SetWindow    glcd_spi_lpc1700.o
+    0x00000dac   0x00000dac   0x00000012   Code   RO          101    i.GLCD_WindowMax    glcd_spi_lpc1700.o
+    0x00000dbe   0x00000dbe   0x00000002   PAD
+    0x00000dc0   0x00000dc0   0x00000028   Code   RO         1351    i.GPIO_PinWrite     gpio_lpc17xx.o
+    0x00000de8   0x00000de8   0x0000002c   Code   RO         1352    i.GPIO_PortClock    gpio_lpc17xx.o
+    0x00000e14   0x00000e14   0x00000038   Code   RO         1355    i.GPIO_SetDir       gpio_lpc17xx.o
+    0x00000e4c   0x00000e4c   0x00000098   Code   RO          458    i.Gallery           gallery.o
+    0x00000ee4   0x00000ee4   0x0000003c   Code   RO            5    i.KBD_Init          kbd.o
+    0x00000f20   0x00000f20   0x00000010   Code   RO            6    i.KBD_get           kbd.o
+    0x00000f30   0x00000f30   0x0000005c   Code   RO         1154    i.LED_Initialize    led_mcb1700.o
+    0x00000f8c   0x00000f8c   0x000000fc   Code   RO         1404    i.PIN_Configure     pin_lpc17xx.o
+    0x00001088   0x00001088   0x00000030   Code   RO          705    i.RdCmdDat          usbhw.o
+    0x000010b8   0x000010b8   0x00000140   Code   RO         1450    i.SystemClockUpdate  system_lpc17xx.o
+    0x000011f8   0x000011f8   0x00000140   Code   RO         1452    i.SystemInit        system_lpc17xx.o
+    0x00001338   0x00001338   0x00000130   Code   RO          396    i.TIMER0_IRQHandler  player.o
+    0x00001468   0x00001468   0x00000020   Code   RO          707    i.USB_ClrStallEP    usbhw.o
+    0x00001488   0x00001488   0x0000004c   Code   RO          708    i.USB_ConfigEP      usbhw.o
+    0x000014d4   0x000014d4   0x00000044   Code   RO          709    i.USB_Configure     usbhw.o
+    0x00001518   0x00001518   0x00000020   Code   RO          710    i.USB_Connect       usbhw.o
+    0x00001538   0x00001538   0x00000024   Code   RO          711    i.USB_DMA_BufAdr    usbhw.o
+    0x0000155c   0x0000155c   0x00000018   Code   RO          714    i.USB_DMA_Enable    usbhw.o
+    0x00001574   0x00001574   0x0000010c   Code   RO          715    i.USB_DMA_Setup     usbhw.o
+    0x00001680   0x00001680   0x00000038   Code   RO          578    i.USB_DataInStage   usbcore.o
+    0x000016b8   0x000016b8   0x00000028   Code   RO          579    i.USB_DataOutStage  usbcore.o
+    0x000016e0   0x000016e0   0x00000024   Code   RO          718    i.USB_DisableEP     usbhw.o
+    0x00001704   0x00001704   0x00000020   Code   RO          719    i.USB_EnableEP      usbhw.o
+    0x00001724   0x00001724   0x00000330   Code   RO          580    i.USB_EndPoint0     usbcore.o
+    0x00001a54   0x00001a54   0x000000b8   Code   RO          932    i.USB_EndPoint3     usbuser.o
+    0x00001b0c   0x00001b0c   0x0000021c   Code   RO          721    i.USB_IRQHandler    usbhw.o
+    0x00001d28   0x00001d28   0x000000b0   Code   RO          722    i.USB_Init          usbhw.o
+    0x00001dd8   0x00001dd8   0x0000006c   Code   RO          723    i.USB_ReadEP        usbhw.o
+    0x00001e44   0x00001e44   0x000000b8   Code   RO          581    i.USB_ReqGetDescriptor  usbcore.o
+    0x00001efc   0x00001efc   0x000000c0   Code   RO          582    i.USB_ReqGetStatus  usbcore.o
+    0x00001fbc   0x00001fbc   0x000000ec   Code   RO          583    i.USB_ReqSetClrFeature  usbcore.o
+    0x000020a8   0x000020a8   0x000001b8   Code   RO          584    i.USB_ReqSetConfiguration  usbcore.o
+    0x00002260   0x00002260   0x00000130   Code   RO          585    i.USB_ReqSetInterface  usbcore.o
+    0x00002390   0x00002390   0x000000c4   Code   RO          724    i.USB_Reset         usbhw.o
+    0x00002454   0x00002454   0x0000003c   Code   RO          586    i.USB_ResetCore     usbcore.o
+    0x00002490   0x00002490   0x00000020   Code   RO          725    i.USB_ResetEP       usbhw.o
+    0x000024b0   0x000024b0   0x00000008   Code   RO          939    i.USB_Reset_Event   usbuser.o
+    0x000024b8   0x000024b8   0x00000002   Code   RO          726    i.USB_Resume        usbhw.o
+    0x000024ba   0x000024ba   0x00000002   Code   RO          940    i.USB_SOF_Event     usbuser.o
+    0x000024bc   0x000024bc   0x00000030   Code   RO          727    i.USB_SetAddress    usbhw.o
+    0x000024ec   0x000024ec   0x00000024   Code   RO          728    i.USB_SetStallEP    usbhw.o
+    0x00002510   0x00002510   0x00000010   Code   RO          587    i.USB_SetupStage    usbcore.o
+    0x00002520   0x00002520   0x0000000e   Code   RO          588    i.USB_StatusInStage  usbcore.o
+    0x0000252e   0x0000252e   0x00000002   PAD
+    0x00002530   0x00002530   0x00000010   Code   RO          589    i.USB_StatusOutStage  usbcore.o
+    0x00002540   0x00002540   0x00000002   Code   RO          729    i.USB_Suspend       usbhw.o
+    0x00002542   0x00002542   0x00000002   Code   RO          731    i.USB_WakeUpCfg     usbhw.o
+    0x00002544   0x00002544   0x00000054   Code   RO          732    i.USB_WriteEP       usbhw.o
+    0x00002598   0x00002598   0x00000028   Code   RO          733    i.WrCmd             usbhw.o
+    0x000025c0   0x000025c0   0x00000044   Code   RO          734    i.WrCmdDat          usbhw.o
+    0x00002604   0x00002604   0x00000058   Code   RO          735    i.WrCmdEP           usbhw.o
+    0x0000265c   0x0000265c   0x00000030   Code   RO         1659    i.__0snprintf$6     mc_w.l(printf6.o)
+    0x0000268c   0x0000268c   0x00000028   Code   RO         1660    i.__0sprintf$6      mc_w.l(printf6.o)
+    0x000026b4   0x000026b4   0x00000024   Code   RO          397    i.__NVIC_DisableIRQ  player.o
+    0x000026d8   0x000026d8   0x0000000e   Code   RO         1808    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x000026e6   0x000026e6   0x00000002   Code   RO         1809    i.__scatterload_null  mc_w.l(handlers.o)
+    0x000026e8   0x000026e8   0x0000000e   Code   RO         1810    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x000026f6   0x000026f6   0x00000002   PAD
+    0x000026f8   0x000026f8   0x000002f0   Code   RO         1665    i._printf_core      mc_w.l(printf6.o)
+    0x000029e8   0x000029e8   0x00000024   Code   RO         1666    i._printf_post_padding  mc_w.l(printf6.o)
+    0x00002a0c   0x00002a0c   0x0000002e   Code   RO         1667    i._printf_pre_padding  mc_w.l(printf6.o)
+    0x00002a3a   0x00002a3a   0x00000016   Code   RO         1668    i._snputc           mc_w.l(printf6.o)
+    0x00002a50   0x00002a50   0x0000000a   Code   RO         1669    i._sputc            mc_w.l(printf6.o)
+    0x00002a5a   0x00002a5a   0x00000002   PAD
+    0x00002a5c   0x00002a5c   0x00000024   Code   RO          499    i.clear_bird        flappy.o
+    0x00002a80   0x00002a80   0x00000076   Code   RO          500    i.clear_pipe        flappy.o
+    0x00002af6   0x00002af6   0x00000002   PAD
+    0x00002af8   0x00002af8   0x00000050   Code   RO          501    i.collide           flappy.o
+    0x00002b48   0x00002b48   0x0000000e   Code   RO          104    i.delay             glcd_spi_lpc1700.o
+    0x00002b56   0x00002b56   0x00000002   PAD
+    0x00002b58   0x00002b58   0x00000024   Code   RO          502    i.draw_bird         flappy.o
+    0x00002b7c   0x00002b7c   0x0000007e   Code   RO          503    i.draw_pipe         flappy.o
+    0x00002bfa   0x00002bfa   0x0000003e   Code   RO          504    i.draw_rect         flappy.o
+    0x00002c38   0x00002c38   0x000000fc   Code   RO          398    i.draw_volume_ui    player.o
+    0x00002d34   0x00002d34   0x000000dc   Code   RO          459    i.gallery_draw_current  gallery.o
+    0x00002e10   0x00002e10   0x0000005c   Code   RO          505    i.game_over_screen  flappy.o
+    0x00002e6c   0x00002e6c   0x00000014   Code   RO            7    i.get_button        kbd.o
+    0x00002e80   0x00002e80   0x00000044   Code   RO          399    i.get_potval        player.o
+    0x00002ec4   0x00002ec4   0x00000060   Code   RO          506    i.hud_draw          flappy.o
+    0x00002f24   0x00002f24   0x0000004c   Code   RO          346    i.initMenu          menu.o
+    0x00002f70   0x00002f70   0x000000a0   Code   RO          277    i.main              main.o
+    0x00003010   0x00003010   0x00000050   Code   RO          347    i.menu_footer       menu.o
+    0x00003060   0x00003060   0x0000008c   Code   RO          105    i.rd_id_man         glcd_spi_lpc1700.o
+    0x000030ec   0x000030ec   0x00000048   Code   RO          106    i.rd_reg            glcd_spi_lpc1700.o
+    0x00003134   0x00003134   0x000000c8   Code   RO          348    i.runMenu           menu.o
+    0x000031fc   0x000031fc   0x000001d0   Code   RO          400    i.runMusicPlayer    player.o
+    0x000033cc   0x000033cc   0x000000cc   Code   RO          349    i.selectMenu        menu.o
+    0x00003498   0x00003498   0x00000020   Code   RO          107    i.spi_tran          glcd_spi_lpc1700.o
+    0x000034b8   0x000034b8   0x00000080   Code   RO          108    i.spi_tran_man      glcd_spi_lpc1700.o
+    0x00003538   0x00003538   0x00000036   Code   RO          401    i.ui_header         player.o
+    0x0000356e   0x0000356e   0x00000036   Code   RO          460    i.ui_header         gallery.o
+    0x000035a4   0x000035a4   0x0000001c   Code   RO          507    i.wait_short        flappy.o
+    0x000035c0   0x000035c0   0x00000028   Code   RO          109    i.wr_cmd            glcd_spi_lpc1700.o
+    0x000035e8   0x000035e8   0x00000028   Code   RO          110    i.wr_dat            glcd_spi_lpc1700.o
+    0x00003610   0x00003610   0x00000012   Code   RO          111    i.wr_dat_only       glcd_spi_lpc1700.o
+    0x00003622   0x00003622   0x00000002   PAD
+    0x00003624   0x00003624   0x00000014   Code   RO          112    i.wr_dat_start      glcd_spi_lpc1700.o
+    0x00003638   0x00003638   0x0000000c   Code   RO          113    i.wr_dat_stop       glcd_spi_lpc1700.o
+    0x00003644   0x00003644   0x00000014   Code   RO          114    i.wr_reg            glcd_spi_lpc1700.o
+    0x00003658   0x00003658   0x00001880   Data   RO          115    .constdata          glcd_spi_lpc1700.o
+    0x00004ed8   0x00004ed8   0x00062701   Data   RO          461    .constdata          gallery.o
+    0x000675d9   0x000675d9   0x000000e4   Data   RO          689    .constdata          usbdesc.o
+    0x000676bd   0x000676bd   0x00000003   PAD
+    0x000676c0   0x000676c0   0x00000010   Data   RO          737    .constdata          usbhw.o
+    0x000676d0   0x000676d0   0x00000040   Data   RO          941    .constdata          usbuser.o
+    0x00067710   0x00067710   0x00000010   Data   RO         1159    .constdata          led_mcb1700.o
+    0x00067720   0x00067720   0x00000018   Data   RO         1231    .constdata          eventrecorder.o
+    0x00067738   0x00067738   0x00000020   Data   RO         1806    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x10000000, Load base: 0x0004ff68, Size: 0x00000524, Max: 0x00009000, ABSOLUTE, UNINIT)
-
-    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
-
-    0x10000000   0x0004ff68   0x00000025   Data   RW          401    .data               player.o
-    0x10000025   0x0004ff8d   0x00000003   PAD
-    0x10000028   0x0004ff90   0x00000028   Data   RW          578    .data               usbcore.o
-    0x10000050   0x0004ffb8   0x00000003   Data   RW         1074    .data               adc_mcb1700.o
-    0x10000053   0x0004ffbb   0x00000001   PAD
-    0x10000054   0x0004ffbc   0x00000008   Data   RW         1440    .data               system_lpc17xx.o
-    0x1000005c   0x0004ffc4   0x00000004   Data   RW         1482    .data               mc_w.l(rand.o)
-    0x10000060   0x0004ffc8   0x00000020   PAD
-    0x10000080        -       0x000004a4   Zero   RW         1216    .bss.noinit         eventrecorder.o
-
-
-    Execution Region RW_IRAM2 (Exec base: 0x2007c000, Load base: 0x0004ffc8, Size: 0x00000508, Max: 0x00009000, ABSOLUTE, UNINIT)
+    Execution Region RW_IRAM1 (Exec base: 0x10000000, Load base: 0x00067758, Size: 0x00000524, Max: 0x00009000, ABSOLUTE, UNINIT)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x2007c000   0x0004ffc8   0x00000005   Data   RW          116    .data               glcd_spi_lpc1700.o
-    0x2007c005   0x0004ffcd   0x00000003   PAD
-    0x2007c008   0x0004ffd0   0x00000008   Data   RW          457    .data               gallery.o
-    0x2007c010   0x0004ffd8   0x00000008   Data   RW          500    .data               flappy.o
-    0x2007c018   0x0004ffe0   0x00000008   Data   RW          725    .data               usbhw.o
-    0x2007c020   0x0004ffe8   0x00000002   Data   RW         1030    .data               adcuser.o
-    0x2007c022   0x0004ffea   0x00000002   PAD
-    0x2007c024        -       0x00000040   Zero   RW          577    .bss                usbcore.o
-    0x2007c064        -       0x00000080   Zero   RW          723    .bss                usbhw.o
-    0x2007c0e4   0x0004ffea   0x00000004   PAD
-    0x2007c0e8        -       0x00000200   Zero   RW         1424    STACK               startup_lpc17xx.o
-    0x2007c2e8        -       0x00000220   Zero   RW          726    USB_RAM             usbhw.o
+    0x10000000   0x00067758   0x00000005   Data   RW          116    .data               glcd_spi_lpc1700.o
+    0x10000005   0x0006775d   0x00000003   PAD
+    0x10000008   0x00067760   0x00000022   Data   RW          402    .data               player.o
+    0x1000002a   0x00067782   0x00000002   PAD
+    0x1000002c   0x00067784   0x00000028   Data   RW          591    .data               usbcore.o
+    0x10000054   0x000677ac   0x00000008   Data   RW          738    .data               usbhw.o
+    0x1000005c   0x000677b4   0x00000003   Data   RW         1087    .data               adc_mcb1700.o
+    0x1000005f   0x000677b7   0x00000021   PAD
+    0x10000080        -       0x000004a4   Zero   RW         1230    .bss.noinit         eventrecorder.o
+
+
+    Execution Region RW_IRAM2 (Exec base: 0x2007c000, Load base: 0x000677b8, Size: 0x00000500, Max: 0x00009000, ABSOLUTE, UNINIT)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x2007c000   0x000677b8   0x00000008   Data   RW          462    .data               gallery.o
+    0x2007c008   0x000677c0   0x00000008   Data   RW          508    .data               flappy.o
+    0x2007c010   0x000677c8   0x00000002   Data   RW         1043    .data               adcuser.o
+    0x2007c012   0x000677ca   0x00000002   PAD
+    0x2007c014   0x000677cc   0x00000008   Data   RW         1453    .data               system_lpc17xx.o
+    0x2007c01c   0x000677d4   0x00000004   Data   RW         1495    .data               mc_w.l(rand.o)
+    0x2007c020        -       0x00000040   Zero   RW          590    .bss                usbcore.o
+    0x2007c060        -       0x00000080   Zero   RW          736    .bss                usbhw.o
+    0x2007c0e0        -       0x00000200   Zero   RW         1437    STACK               startup_lpc17xx.o
+    0x2007c2e0        -       0x00000220   Zero   RW          739    USB_RAM             usbhw.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+        40         12          0          3          0       2455   adc_mcb1700.o
+       248         32          0          2          0       2522   adcuser.o
+         0          0         24          0       1188       3924   eventrecorder.o
+      1170         92          0          8          0       6617   flappy.o
+       426        104     403201          8          0       2842   gallery.o
+      2872        100       6272          5          0      15826   glcd_spi_lpc1700.o
+       140         14          0          0          0       1807   gpio_lpc17xx.o
+        96         22          0          0          0       5774   kbd.o
+        92          4         16          0          0       1421   led_mcb1700.o
+       160         58          0          0          0      23583   main.o
+       560        116          0          0          0       2806   menu.o
+       252          6          0          0          0        844   pin_lpc17xx.o
+      1178        338          0         34          0      31215   player.o
+        40         12        204          0        512       1028   startup_lpc17xx.o
+       640         36          0          8          0       1407   system_lpc17xx.o
+      2374        236          0         40         64      10199   usbcore.o
+         0          0        228          0          0        677   usbdesc.o
+      2092        230         16          8        672      41103   usbhw.o
+       194         20         64          0          0       2009   usbuser.o
+
+    ----------------------------------------------------------------------
+     12584       1432     410060        124       2468     158059   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+        10          0          3          8         32          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+       954         14          0          0          0        572   printf6.o
+        36         10          0          4          0        136   rand.o
+        44          0          0          0          0         80   uidiv.o
+
+    ----------------------------------------------------------------------
+      1124         40          0          4          0        856   Library Totals
+         4          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+      1120         40          0          4          0        856   mc_w.l
+
+    ----------------------------------------------------------------------
+      1124         40          0          4          0        856   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+     13708       1472     410060        128       2468     153659   Grand Totals
+     13708       1472     410060        128       2468     153659   ELF Image Totals
+     13708       1472     410060        128          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)               423768 ( 413.84kB)
+    Total RW  Size (RW Data + ZI Data)              2596 (   2.54kB)
+    Total ROM Size (Code + RO Data + RW Data)     423896 ( 413.96kB)
+
+==============================================================================
 
